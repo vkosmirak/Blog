@@ -1,2 +1,2 @@
 ### Blog
-Place to save usefull something
+Place to save something usefull
