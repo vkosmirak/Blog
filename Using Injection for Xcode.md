@@ -1,6 +1,6 @@
 # Using [Injection for Xcode](https://github.com/johnno1962/injectionforxcode)
 
-Using in simulator
+###Using in simulator
 
 1. Install InjectionPlugin in Alcatraz
 2. Make sure main.m (empty for Swift) and Prefix.pch (connected in Build Settings/Prefix Header) exists
@@ -9,7 +9,7 @@ Using in simulator
 4. Select some .m class and make some changes
 5. Product -> Inject Source
 
-Using in device:
+###Using in device:
 
 1. Add Run script to target 
 `echo "$CODESIGNING_FOLDER_PATH" >/tmp/"$USER.ident" && echo "$CODE_SIGN_IDENTITY" >>/tmp/"$USER.ident" && exit;`
@@ -17,16 +17,20 @@ Using in device:
 3. ProjectFolder/iOSInjectionProject/(x86_64 or armv7)/identity.txt - change last line `iPhone Developer` to  `iPhone Developer: My Name (XX4XXXXX64)`
 4. Run it on Device
 
-Handling changes in storyboards:
+###Handling changes in storyboards:
 
 1. Product -> Injection Plugin -> Tunable App Parameters - Check Inject Storyboards
 2. Rebuild app
 
-Using Tunable App Parameters:
+###Using Tunable App Parameters:
 
 1. Make sure that Prefix.pch contain `#import "/tmp/injectionforxcode/BundleInterface.h"`
 2. Use `INParameters[0]`, `INColors[0]` and `INImageTarget`
 
+###TODO:
 
-> My comment:
+1. Simplify installing, there are some steps that is not actual for now
+2. DEMO: how to use
+
+My comment:
 > There are some cases when injection failed. Try to reinject
