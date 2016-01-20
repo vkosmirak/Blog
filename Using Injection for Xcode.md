@@ -29,7 +29,7 @@
 
 ###TODO:
 
-1. Simplify installing, there are some steps that is not actual for now
+1. Simplify installing, there are some steps that are not actual for now
 2. DEMO: how to use
 
 My comment:
