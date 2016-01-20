@@ -26,3 +26,7 @@ Using Tunable App Parameters:
 
 1. Make sure that Prefix.pch contain `#import "/tmp/injectionforxcode/BundleInterface.h"`
 2. Use `INParameters[0]`, `INColors[0]` and `INImageTarget`
+
+
+> My comment:
+> There are some cases when injection failed. Try to reinject
