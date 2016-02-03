@@ -12,3 +12,5 @@ git stash pop
 ```
 
 
+
+look here https://github.com/tiimgreen/github-cheat-sheet
