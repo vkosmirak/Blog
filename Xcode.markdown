@@ -7,3 +7,6 @@ Select Target / Build Phases / Add run script
 KEYWORDS="TODO:|FIXME:|\?\?\?:|\!\!\!:"
 find "${SRCROOT}" \( -name "*.h" -or -name "*.m" \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching "($KEYWORDS).*\$" | perl -p -e "s/($KEYWORDS)/ warning: \$1/"
 ```
+
+###Debug 
+When some crash ocurrapted, use `di -s 0x20344bs` to see where is an error
