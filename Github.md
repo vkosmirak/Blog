@@ -18,3 +18,5 @@ https://github.com/jayphelps/git-blame-someone-else
 [Git branch Best Practices](http://nvie.com/files/Git-branching-model.pdf)
 
 look here https://github.com/tiimgreen/github-cheat-sheet
+
+commit structure https://habrahabr.ru/company/Voximplant/blog/276695/
