@@ -10,3 +10,8 @@ find "${SRCROOT}" \( -name "*.h" -or -name "*.m" \) -print0 | xargs -0 egrep --w
 
 ###Debug 
 When some crash ocurrapted, use `di -s 0x20344bs` to see where is an error
+
+
+###Some standarts
+
+1. Storyboard - use size `iPhone 4-inc` for all controllers, `Inferred` only by need 
