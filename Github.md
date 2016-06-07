@@ -1,3 +1,8 @@
+###Revert specific commit
+
+`git revert <commit>`
+
+
 ###Revert last 3 commits 
 
 `git reset --soft HEAD~3`
