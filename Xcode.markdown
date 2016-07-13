@@ -15,6 +15,6 @@ When some crash ocurrapted, use `di -s 0x20344bs` to see where is an error
 ###Some standarts
 
 1. Storyboard - use size `iPhone 4-inc` for all controllers, `Inferred` only by need
-2. Storyboard - remove all images from imageView -> .storyboard file will load faster 
+2. Storyboard - remove big images from imageView (set it in code) -> .storyboard file will load faster 
 2. Wrap all controllers in scrollView
 3. Git commits should be revertable
