@@ -19,7 +19,7 @@ git stash pop
 ###Copy commit from another branch
 
 ```
-git cherry-pick
+git cherry-pick <commit>
 ```
 ###It's not my commit
 https://github.com/jayphelps/git-blame-someone-else
