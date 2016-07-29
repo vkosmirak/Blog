@@ -8,7 +8,7 @@
 5. [XcodeWay](https://github.com/onmyway133/XcodeWay) - Navigate to repository, simulator, delivery data and more folders from Xcode
 6. [AllTargets](https://github.com/poboke/AllTargets) - Auto select all targets when you add files to the project
 7. [Anglerfish](https://github.com/dealforest/Anglerfish) - Sort the recently used simulators
-8. [HTYCopyIssue](https://github.com/hanton/CopyIssue-Xcode-Plugin) - Add 'Ask google'and 'Copy Issue' button to issue
+8. [HTYCopyIssue](https://github.com/hanton/CopyIssue-Xcode-Plugin) - Add 'Ask google'  and  'Copy Issue' button to issue
 
 ###Xcode code templates
 1. Swift
