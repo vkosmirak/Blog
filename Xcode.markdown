@@ -11,7 +11,8 @@
 8. [HTYCopyIssue](https://github.com/hanton/CopyIssue-Xcode-Plugin) - Add 'Ask google'and 'Copy Issue' button to issue
 
 ###Xcode code templates
-
+1. Swift
+2. Objective-C
 
 ###Some standarts
 1. Storyboard - use size `iPhone 4-inc` for all controllers, `Inferred` only by need
