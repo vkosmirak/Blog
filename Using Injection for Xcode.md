@@ -32,5 +32,5 @@
 1. Simplify installing, there are some steps that are not actual for now
 2. DEMO: how to use
 
-My comment:
+Comment:
 > There are some cases when injection failed. Try to reinject
