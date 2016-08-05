@@ -30,3 +30,7 @@ https://github.com/jayphelps/git-blame-someone-else
 look here https://github.com/tiimgreen/github-cheat-sheet
 
 commit structure https://habrahabr.ru/company/Voximplant/blog/276695/
+
+
+###How to Write a Git Commit Message
+http://chris.beams.io/posts/git-commit/
