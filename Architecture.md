@@ -5,5 +5,5 @@ Uncle Bob https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.
 ###TDD in swift
 Clean Swift http://clean-swift.com/
 
-###Good networking
+###Best networking practice
 https://realm.io/news/slug-marcus-zarra-exploring-mvcn-swift/
