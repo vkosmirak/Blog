@@ -3,7 +3,9 @@
 Uncle Bob https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html  
 
 ###TDD in swift
-Clean Swift http://clean-swift.com/
+Clean Swift http://clean-swift.com/  
+https://tech.blacklane.com/2015/12/13/test-automation-for-ios/  
+Quality Coding http://qualitycoding.org
 
 ###Best networking practice
 https://realm.io/news/slug-marcus-zarra-exploring-mvcn-swift/  
