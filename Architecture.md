@@ -15,4 +15,5 @@ https://github.com/ishkawa/APIKit
 
 ###Stub network calls
 https://github.com/AliSoftware/OHHTTPStubs  
-https://github.com/dstnbrkr/VCRURLConnection
+https://github.com/dstnbrkr/VCRURLConnection  
+Example: http://albertodebortoli.com/blog/2015/11/23/offline-ui-testing-on-ios-with-stubs/
