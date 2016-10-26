@@ -21,6 +21,13 @@ git stash pop
 ```
 git cherry-pick <commit>
 ```
+
+###Roll back to commit 
+```
+git reset --hard <commit>
+```
+
+
 ###It's not my commit
 https://github.com/jayphelps/git-blame-someone-else
 
