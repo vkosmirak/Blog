@@ -19,3 +19,10 @@
 2. Storyboard - remove big images from imageView (set it in code) -> .storyboard file will load faster 
 3. Wrap all controllers in scrollView [video](https://www.youtube.com/watch?v=UnQsFlMGDsI)
 4. Git commits should be revertable
+
+
+###Check build time  
+1. Build menu  
+2. Copy transcripts for shown results  
+3. in Terminal:  
+`pbpaste | egrep '\.[0-9]ms' | sort -t "." -k 1 -n | tail -10`
