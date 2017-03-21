@@ -1,14 +1,14 @@
-###Revert specific commit
+### Revert specific commit
 
 `git revert <commit>`
 
 
-###Revert last 3 commits 
+### Revert last 3 commits 
 
 `git reset --soft HEAD~3`
 
 
-###Apply current changes in another branch
+### Apply current changes in another branch
 
 ```
 git stash
@@ -16,19 +16,19 @@ git checkout other-branch
 git stash pop
 ```
 
-###Copy commit from another branch
+### Copy commit from another branch
 
 ```
 git cherry-pick <commit>
 ```
 
-###Roll back to commit 
+### Roll back to commit 
 ```
 git reset --hard <commit>
 ```
 
 
-###It's not my commit
+### It's not my commit
 https://github.com/jayphelps/git-blame-someone-else
 
 
@@ -39,5 +39,5 @@ look here https://github.com/tiimgreen/github-cheat-sheet
 commit structure https://habrahabr.ru/company/Voximplant/blog/276695/
 
 
-###How to Write a Git Commit Message
+### How to Write a Git Commit Message
 http://chris.beams.io/posts/git-commit/
