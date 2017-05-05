@@ -32,6 +32,10 @@ git reset --hard <commit>
 git push origin master --force
 ```
 
+### Remove all files ignored by Git 
+```
+git clean -fdx
+```
 
 ### It's not my commit
 https://github.com/jayphelps/git-blame-someone-else
