@@ -1,6 +1,6 @@
-#Tips & Tricks
+### Tips & Tricks
 
-###Emails for testing
+### Emails for testing
 You can use `username@gmail.com` multiple times for registration.
 Here is how:
 ```
