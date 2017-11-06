@@ -9,3 +9,14 @@ username+2@gmail.com
 username+lvl1@gmail.com
 ```
 All letters will be redirected to `username@gmail.com`
+
+
+## Finder
+### Quickly show hidden files
+```
+CMD + Shift + .(dot)
+```
+### Go to folder
+```
+CMD + Shift + G
+```
