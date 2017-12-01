@@ -12,7 +12,7 @@ All letters will be redirected to `username@gmail.com`
 
 
 ## Finder
-### Quickly show hidden files
+### Quickly show/hide hidden files
 ```
 CMD + Shift + .(dot)
 ```
