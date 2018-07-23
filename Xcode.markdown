@@ -12,3 +12,8 @@
 po NSHomeDirectory()
 ```
 
+### Show gestures on simulator: 
+```
+defaults write http://com.apple .iphonesimulator ShowSingleTouches 1
+```
+
