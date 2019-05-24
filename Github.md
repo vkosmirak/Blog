@@ -22,6 +22,11 @@ git stash pop
 git cherry-pick <commit>
 ```
 
+### Remove all local changes
+```
+git reset --hard
+```
+
 ### Roll back to commit 
 ```
 git reset --hard <commit>
