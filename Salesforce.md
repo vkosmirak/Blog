@@ -76,7 +76,7 @@ Select one or more variables:
  - `SKIP_PIN_SCREEN`, `SKIP_APP_UPDATE_ALERT`, `SKIP_NEW_METADATA_ALERT`  
 
 ### Show all LAC iOS-Javascript requests
-LACEngine 160
+LACEngine.swift 160
 ```
 debugPrint(#file, #function, requestName, params, json)
 ```
