@@ -59,6 +59,10 @@ if table.name.contains("OCE__DataChange__c") ||
 }
 ```
 
+### Skip Attachment ContentDocumentLink tables (speed-up sync)
+TODO
+
+
 ### Skip visibility loading (speed up background sync)
 Comment LoadDataOperation.swift 173  
 Consiqence: records will not be deleted if deleted in Salesforce
