@@ -30,6 +30,11 @@ FROM OCE__SyncTransaction__c WHERE
 CreatedById = '0051U000004U7w6QAC'
 ```
 
+Get error logs by user
+// TODO
+
+Get sync statistic by user
+// TODO
 
 ### Examples of nested select:
 ```
@@ -65,7 +70,7 @@ if table.name.contains("OCE__DataChange__c") ||
 }
 ```
 
-### Skip Attachment ContentDocumentLink tables (speed-up sync)
+### Skip Attachment & ContentDocumentLink tables (speed-up sync)
 TODO
 
 
