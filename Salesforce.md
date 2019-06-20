@@ -31,7 +31,7 @@ CreatedById = '0051U000004U7w6QAC'
 ```
 
 
-### Examples of nestes select:
+### Examples of nested select:
 ```
 select OCE__Status__c
 ,(select id, OCE__Log__c from OCE__SyncTransactionLogs__r)
