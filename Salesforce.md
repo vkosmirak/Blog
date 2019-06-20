@@ -7,7 +7,13 @@ Setup - Installed packages - OCE CRM
 #### How to see all changes by admin in the org:
 Setup -> Search -> View Setup Audit Trail
 
-
+#### Get metadata archive  
+Send next info to @mpetriv or @vlitovka
+```
+Organization: 00D1r000001m3itEAA
+Metadata: MD-000048
+Profile: THX Rep
+```
 
 ## Workbench
 
