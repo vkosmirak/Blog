@@ -24,17 +24,18 @@ SELECT Email,Id,Name FROM User
 
 Get details of sync transaction
 ```
-select id, CreatedDate, CreatedById, OCE__Status__c
-,(select id, OCE__Log__c from OCE__SyncTransactionLogs__r)
-,(select id, OCE__EntityType__c, OCE__Data__c from OCE__SyncTransactionItems__r)
-from
-OCE__SyncTransaction__c
-where id = 'a336A000001IJT5QAO'
+SELECT CreatedDate, CreatedById, id, Name, OCE__DependentOfflineIds__c, OCE__Status__c , 
+OCE__LastRunLog__c, isDeleted,
+(SELECT id, OCE__Log__c from OCE__SyncTransactionLogs__r),
+(SELECT id, OCE__EntityType__c, OCE__Data__c from OCE__SyncTransactionItems__r)
+FROM OCE__SyncTransaction__c
+WHERE id = 'a331r000003wbBtAAI'
 ```
 
 Get error logs by user
 ```
-SELECT CreatedById,CreatedDate,Id,Name,OCE__Level__c,OCE__Message__c,OCE__Where__c, OCE__DeviceID__c,OCE__DeviceType__c,OCE__Origin__c, OCE__OSNameVersion__c, isDeleted
+SELECT CreatedById,CreatedDate,Id,Name,OCE__Level__c,OCE__Message__c,OCE__Where__c, 
+OCE__DeviceID__c,OCE__DeviceType__c,OCE__Origin__c, OCE__OSNameVersion__c, isDeleted
 FROM OCE__Log__c 
 WHERE 
 CreatedById = '0051r0000095GtFAAU' AND 
@@ -44,10 +45,11 @@ ORDER BY CreatedDate ASC NULLS FIRST
 
 Get sync statistic by user
 ```
-SELECT CreatedById,CreatedDate,Id,Name,OCE__AppVersion__c,OCE__DeviceId__c,OCE__iosVersion__c,OCE__MetadataVersion__c, OCE__NetworkType__c,OCE__SyncTrigger__c,
-OCE__DownloadComplete__c,OCE__DownloadStart__c, OCE__DownloadEnd__c, OCE__DownloadRecords__c, 
-OCE__DownloadUpdatedRecords__c,
-OCE__UploadComplete__c, OCE__UploadStart__c, OCE__UploadEnd__c, OCE__UploadDuration__c, OCE__UploadRecords__c, IsDeleted
+SELECT CreatedById,CreatedDate,Id,Name,OCE__AppVersion__c,OCE__DeviceId__c,OCE__iosVersion__c,
+OCE__MetadataVersion__c, OCE__NetworkType__c,OCE__SyncTrigger__c, OCE__DownloadComplete__c,
+OCE__DownloadStart__c, OCE__DownloadEnd__c, OCE__DownloadRecords__c, OCE__DownloadUpdatedRecords__c,
+OCE__UploadComplete__c, OCE__UploadStart__c, OCE__UploadEnd__c, OCE__UploadDuration__c, 
+OCE__UploadRecords__c, IsDeleted
 FROM OCE__SyncStatistics__c 
 WHERE 
 CreatedById = '0051r000009KobHAAS' AND 
