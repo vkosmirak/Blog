@@ -22,7 +22,7 @@ Get all users
 SELECT Email,Id,Name FROM User
 ```
 
-Get all sync transactions
+Get details of sync transaction
 ```
 select id, CreatedDate, CreatedById, OCE__Status__c
 ,(select id, OCE__Log__c from OCE__SyncTransactionLogs__r)
