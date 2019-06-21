@@ -33,28 +33,26 @@ where id = 'a336A000001IJT5QAO'
 ```
 
 Get error logs by user
-// TODO
-
-Get sync statistic by user
 ```
-SELECT CreatedById,CreatedDate,CurrencyIsoCode,Id,Name,OCE__AppVersion__c,OCE__DeviceId__c,OCE__iosVersion__c,OCE__MetadataVersion__c,OCE__SyncTrigger__c 
-FROM OCE__SyncStatistics__c 
-WHERE CreatedById = '0051r000009KobHAAS' AND 
-CreatedDate > 2019-05-08T05:00:09.000Z 
+SELECT CreatedById,CreatedDate,Id,Name,OCE__Level__c,OCE__Message__c,OCE__Where__c, OCE__DeviceID__c,OCE__DeviceType__c,OCE__Origin__c, OCE__OSNameVersion__c, isDeleted
+FROM OCE__Log__c 
+WHERE 
+CreatedById = '0051r0000095GtFAAU' AND 
+CreatedDate > 2019-01-24T05:02:31.000Z
 ORDER BY CreatedDate ASC NULLS FIRST
 ```
 
-### Examples of nested select:
+Get sync statistic by user
 ```
-select OCE__Status__c
-,(select id, OCE__Log__c from OCE__SyncTransactionLogs__r)
-,(select id, OCE__EntityType__c, OCE__Data__c from OCE__SyncTransactionItems__r)
-from
-OCE__SyncTransaction__c
-where OCE__Status__c = 'failed'
-```
-```
-SELECT RelatedId FROM Group WHERE relatedId IN (SELECT id from Territory)
+SELECT CreatedById,CreatedDate,Id,Name,OCE__AppVersion__c,OCE__DeviceId__c,OCE__iosVersion__c,OCE__MetadataVersion__c, OCE__NetworkType__c,OCE__SyncTrigger__c,
+OCE__DownloadComplete__c,OCE__DownloadStart__c, OCE__DownloadEnd__c, OCE__DownloadRecords__c, 
+OCE__DownloadUpdatedRecords__c,
+OCE__UploadComplete__c, OCE__UploadStart__c, OCE__UploadEnd__c, OCE__UploadDuration__c, OCE__UploadRecords__c, IsDeleted
+FROM OCE__SyncStatistics__c 
+WHERE 
+CreatedById = '0051r000009KobHAAS' AND 
+CreatedDate > 2019-05-08T05:00:09.000Z 
+ORDER BY CreatedDate ASC NULLS FIRST
 ```
 
 
