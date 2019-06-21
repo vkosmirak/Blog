@@ -36,7 +36,13 @@ Get error logs by user
 // TODO
 
 Get sync statistic by user
-// TODO
+```
+SELECT CreatedById,CreatedDate,CurrencyIsoCode,Id,Name,OCE__AppVersion__c,OCE__DeviceId__c,OCE__iosVersion__c,OCE__MetadataVersion__c,OCE__SyncTrigger__c 
+FROM OCE__SyncStatistics__c 
+WHERE CreatedById = '0051r000009KobHAAS' AND 
+CreatedDate > 2019-05-08T05:00:09.000Z 
+ORDER BY CreatedDate ASC NULLS FIRST
+```
 
 ### Examples of nested select:
 ```
