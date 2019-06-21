@@ -22,7 +22,7 @@ Get all users
 SELECT Email,Id,Name FROM User
 ```
 
-Get details of sync transaction
+Get sync transaction details
 ```
 SELECT CreatedDate, CreatedById, id, Name, OCE__DependentOfflineIds__c, OCE__Status__c , 
 OCE__LastRunLog__c, isDeleted,
@@ -32,7 +32,7 @@ FROM OCE__SyncTransaction__c
 WHERE id = 'a331r000003wbBtAAI'
 ```
 
-Get error logs by user
+Get user's error logs
 ```
 SELECT CreatedById,CreatedDate,Id,Name,OCE__Level__c,OCE__Message__c,OCE__Where__c, 
 OCE__DeviceID__c,OCE__DeviceType__c,OCE__Origin__c, OCE__OSNameVersion__c, isDeleted
@@ -43,7 +43,7 @@ CreatedDate > 2019-01-24T05:02:31.000Z
 ORDER BY CreatedDate ASC NULLS FIRST
 ```
 
-Get sync statistic by user
+Get user's sync statistic
 ```
 SELECT CreatedById,CreatedDate,Id,Name,OCE__AppVersion__c,OCE__DeviceId__c,OCE__iosVersion__c,
 OCE__MetadataVersion__c, OCE__NetworkType__c,OCE__SyncTrigger__c, OCE__DownloadComplete__c,
