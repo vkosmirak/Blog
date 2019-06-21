@@ -22,12 +22,14 @@ Get all users
 SELECT Email,Id,Name FROM User
 ```
 
-Get all sync transactions by user
+Get all sync transactions
 ```
-SELECT CreatedById,CreatedDate,Id,Name,OCE__AllItemsCount__c,OCE__AppVersion__c,OCE__DependentOfflineIds__c,OCE__LastRunDebug__c,OCE__LastRunLog__c,OCE__Status__c, 
-(select id, OCE__EntityType__c, OCE__Data__c from OCE__SyncTransactionItems__r) 
-FROM OCE__SyncTransaction__c WHERE
-CreatedById = '0051U000004U7w6QAC'
+select id, CreatedDate, CreatedById, OCE__Status__c
+,(select id, OCE__Log__c from OCE__SyncTransactionLogs__r)
+,(select id, OCE__EntityType__c, OCE__Data__c from OCE__SyncTransactionItems__r)
+from
+OCE__SyncTransaction__c
+where id = 'a336A000001IJT5QAO'
 ```
 
 Get error logs by user
