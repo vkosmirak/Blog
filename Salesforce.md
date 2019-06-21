@@ -24,13 +24,29 @@ SELECT Email,Id,Name FROM User
 
 ### Get sync transaction details
 ```
-SELECT CreatedDate, CreatedById, id, Name, OCE__DependentOfflineIds__c, OCE__Status__c , 
+SELECT CreatedById, CreatedDate, Id, Name, OCE__DependentOfflineIds__c, OCE__Status__c , 
 OCE__LastRunLog__c, isDeleted,
 (SELECT id, OCE__Log__c from OCE__SyncTransactionLogs__r),
-(SELECT id, OCE__EntityType__c, OCE__Data__c from OCE__SyncTransactionItems__r)
+(SELECT id, OCE__EntityType__c, OCE__Data__c, OCE__ProcessedRecordId__c from OCE__SyncTransactionItems__r)
 FROM OCE__SyncTransaction__c
 WHERE id = 'a331r000003wbBtAAI'
 ```
+<details><summary>more</summary>
+<p>
+    
+### Get user's sync stransactions
+
+```
+SELECT CreatedById, CreatedDate, Id, Name, OCE__DependentOfflineIds__c, OCE__Status__c , OCE__LastRunLog__c, OCE__LastRunLog__r.OCE__Log__c, isDeleted,
+(SELECT id, OCE__EntityType__c, OCE__Data__c, OCE__ProcessedRecordId__c from OCE__SyncTransactionItems__r)
+FROM OCE__SyncTransaction__c
+WHERE 
+CreatedById = '0051r000009Kob0AAC' AND
+CreatedDate > 2019-05-16T06:45:00.000Z
+ORDER BY CreatedDate ASC NULLS FIRST
+```
+</p>
+</details>
 
 ### Get user's error logs
 ```
