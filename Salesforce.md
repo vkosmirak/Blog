@@ -15,6 +15,10 @@ Metadata: MD-000048
 Profile: THX Rep
 ```
 
+#### Add trusted IP address
+Setup -> Network access -> New -> Add [your IP address](https://www.myip.com)  
+It needs when you cannot login and see 'Verify you identity (email)' sceen
+
 ## Workbench
 
 ### Get all users
