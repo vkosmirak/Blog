@@ -120,3 +120,14 @@ LACEngine.swift 160
 ```
 debugPrint(#file, #function, requestName, params, json)
 ```
+
+### Run on device
+1. Change bundle id to `com.vkosmirak.oce.dev`
+2. Enable automatic signing, select personal team
+3. `OCE Dev.entitlements` - remove `siri` key
+4. `OCE / Targets / SyncKit` - enable Automatic signing
+5. Run  
+
+Possible issues:
+1. Xcode Missing Support Files - [solution](https://stackoverflow.com/questions/55575782/xcode-missing-support-files-ios-12-2-16e227)
+2.  Device not trusted. Solution - `iPad / Settings / General / Profiles & Device Management / Trust`
