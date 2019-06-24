@@ -17,7 +17,7 @@ Profile: THX Rep
 
 #### Add trusted IP address
 Setup -> Network access -> New -> Add [your IP address](https://www.myip.com)  
-It needs when you cannot login and see 'Verify you identity (email)' sceen
+> It needs when you cannot login and see 'Verify you identity (email)' sceen
 
 ## Workbench
 
@@ -128,6 +128,6 @@ debugPrint(#file, #function, requestName, params, json)
 4. `OCE / Targets / SyncKit` - enable Automatic signing
 5. Run  
 
-Possible issues:
-1. Device not trusted. Solution - `iPad / Settings / General / Profiles & Device Management / Trust`
-2. Xcode Missing Support Files - [solution](https://stackoverflow.com/questions/55575782/xcode-missing-support-files-ios-12-2-16e227) 
+> Possible issues:
+> 1. Device not trusted. Solution - `iPad / Settings / General / Profiles & Device Management / Trust`
+> 2. Xcode Missing Support Files - [solution](https://stackoverflow.com/questions/55575782/xcode-missing-support-files-ios-12-2-16e227) 
