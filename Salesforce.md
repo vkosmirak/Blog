@@ -116,6 +116,10 @@ TODO
 Comment LoadDataOperation.swift 173  
 Consiqence: records will not be deleted if deleted in Salesforce
 
+### Hardcode English localization
+TODO
+
+
 ### Xcode debug tricks
 Xcode / Target / Edit scheme (Command+Alt+R - ⌘⌥R)  
 Select one or more variables:
