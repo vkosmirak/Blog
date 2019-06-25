@@ -15,6 +15,15 @@ Metadata: MD-000048
 Profile: THX Rep
 ```
 
+#### Get Submitted DB
+Send next info to @mpetriv or @vlitovka
+```
+Organization: 00D1r000001m3itEAA
+Accunt name: CELINE GUILLAUME
+Submission date: ~ 6/20/2019 
+```
+> Expected format `db/CELINE GUILLAUME-C8065E8A-3446-450A-9928-603D871B13F3-1561043793.2755141.zip`
+
 #### Add trusted IP address
 Setup -> Network access -> New -> Add [your IP address](https://www.myip.com)  
 > It needs when you cannot login and see 'Verify you identity (email)' sceen
