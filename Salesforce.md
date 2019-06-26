@@ -145,3 +145,35 @@ debugPrint(#file, #function, requestName, params, json)
 > Possible issues:
 > 1. Device not trusted. Solution - `iPad / Settings / General / Profiles & Device Management / Trust`
 > 2. Xcode Missing Support Files - [solution](https://stackoverflow.com/questions/55575782/xcode-missing-support-files-ios-12-2-16e227) 
+
+### Use Submitted DB
+1. Sign in as admin in iPad
+2. Enable `SIMULATE_OFFLINE`
+3. Add next code somewhere
+```
+extension String {
+    init?(optional: String) {
+        self.init(optional)
+    }
+}
+```
+4. Hardcode all user id, profile id and org id    
+```
+SFUserAccountManager.sharedInstance().currentUser?.idData?.userId -> String(optional: "0051r000009ZCAjAAO")
+SFUserAccountManager.sharedInstance().currentUser?.idData?.orgId -> String(optional: "00D1r000000pnJMEAY")
+```
+5. Insert in `User.swift 76` (end of init)
+```
+// Replace territory id with selected from submitted database
+if let selectedTerritory = self.territories.first {
+    self.selectedTerritory = Territory(territory: selectedTerritory)
+    if let selectedTerritoryID = self.selectedTerritoryID {
+        self.selectedTerritory?.id = selectedTerritoryID
+    }
+}       
+```
+6. Set breakpoint in `application(didFinishLaunchingWithOptions)`
+7. Run
+8. Stop on breakpoint
+9. Open simulator folder. Replace `.Data` with `Submitted DB` Folder
+10. Turn off breakpoint and go
