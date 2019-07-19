@@ -137,10 +137,11 @@ debugPrint(#file, #function, requestName, params, json)
 ### Run on device
 1. Change bundle id to `com.vkosmirak.oce.dev`
 2. Enable automatic signing, select personal team
-3. `OCE Dev.entitlements` - remove `siri` key
-4. Insert `SiriService / isSiriShortcutsEnabled()` - `return false`
-5. `OCE / Targets / SyncKit` - enable Automatic signing
-6. Run  
+3. Build settings / Remove `PROVISIONING_PROFILE` key
+4. `OCE Dev.entitlements` - remove `siri` key
+5. Insert `SiriService / isSiriShortcutsEnabled()` - `return false`
+6. `OCE / Targets / SyncKit` - enable Automatic signing
+7. Run  
 
 > Possible issues:
 > 1. Device not trusted. Solution - `iPad / Settings / General / Profiles & Device Management / Trust`
