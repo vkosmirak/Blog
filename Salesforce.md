@@ -40,7 +40,7 @@ SELECT Email,Id,Name FROM User
 SELECT CreatedById, CreatedDate, Id, Name, OCE__DependentOfflineIds__c, OCE__Status__c , 
 OCE__LastRunLog__c, isDeleted,
 (SELECT id, OCE__Log__c from OCE__SyncTransactionLogs__r),
-(SELECT id, OCE__EntityType__c, OCE__Data__c, OCE__ProcessedRecordId__c from OCE__SyncTransactionItems__r)
+(SELECT id, OCE__EntityType__c, OCE__Operation__c, OCE__Data__c, OCE__ProcessedRecordId__c, OCE__Order__c from OCE__SyncTransactionItems__r)
 FROM OCE__SyncTransaction__c
 WHERE id = 'a331r000003wbBtAAI'
 ```
@@ -51,7 +51,7 @@ WHERE id = 'a331r000003wbBtAAI'
 
 ```
 SELECT CreatedById, CreatedDate, Id, Name, OCE__DependentOfflineIds__c, OCE__Status__c , OCE__LastRunLog__c, OCE__LastRunLog__r.OCE__Log__c, isDeleted,
-(SELECT id, OCE__EntityType__c, OCE__Data__c, OCE__ProcessedRecordId__c from OCE__SyncTransactionItems__r)
+(SELECT id, OCE__EntityType__c, OCE__Operation__c, OCE__Data__c, OCE__ProcessedRecordId__c, OCE__Order__c from OCE__SyncTransactionItems__r)
 FROM OCE__SyncTransaction__c
 WHERE 
 CreatedById = '0051r000009Kob0AAC' AND
