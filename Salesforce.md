@@ -28,6 +28,10 @@ Submission date: ~ 6/20/2019
 Setup -> Network access -> New -> Add [your IP address](https://www.myip.com)  
 > It needs when you cannot login and see 'Verify you identity (email)' sceen
 
+#### Add field permission to profile
+Setup -> Profile -> Sales Representative -> Find 'Field-level permission' -> Call -> Edit
+
+
 ## Workbench
 
 ### Get all users
