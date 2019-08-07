@@ -138,6 +138,27 @@ LACEngine.swift 97
 debugPrint(#file, #function, requestName, params, json)
 ```
 
+### Show all AST requests
+ValidationService.swift 61
+```
+debugPrint(rule.fullName)
+```
+ASTNode.swift.swift 43
+```
+let result: Any?
+if let operation = operation as? ASTValue, fieldPrefix.isEmpty == false {
+    result = operation.result(params: params, dataSource: dataSource, fieldPrefix: fieldPrefix, treatNull: treatNull)
+} else {
+    result = operation?.result(params: params, dataSource: dataSource, treatNull: treatNull)
+}
+debugPrint(operation ?? "", params.map { $0.value ?? ""}, "=", result ?? "")
+return result
+```
+ASTOperations.swift 1085
+```
+public class ASTNodeResult
+```
+
 ### Run on device
 1. Change bundle id to `com.vkosmirak.oce.dev`
 2. Enable automatic signing, select personal team
