@@ -28,9 +28,13 @@ Submission date: ~ 6/20/2019
 Setup -> Network access -> New -> Add [your IP address](https://www.myip.com)  
 > It needs when you cannot login and see 'Verify you identity (email)' sceen
 
-#### Add field permission to profile
+#### Field permission to profile
 Setup -> Profile -> Sales Representative -> Find 'Field-level permission' -> Call -> Edit
 
+#### Field permission in DB Schema
+Setup -> Custom Metadata Types -> DB Schema -> Manage Records -> Call -> Find field
+> How to add field:  
+> Call -> Edit -> Deselect 'Active' -> Save -> Clone -> Add field at the end -> Select 'Active' -> Save
 
 ## Workbench
 
