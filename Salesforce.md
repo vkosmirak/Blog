@@ -124,9 +124,11 @@ TODO
 Comment LoadDataOperation.swift 173  
 Consiqence: records will not be deleted if deleted in Salesforce
 
-### Hardcode English localization
-TODO
-
+### Force English localization
+Add next line in `UserSevice.swift` 28 48, `SharedUserSettings.swift` 58 68
+```
+return UserService.defaultLanguage
+```
 
 ### Xcode debug tricks
 Xcode / Target / Edit scheme (Command+Alt+R - ⌘⌥R)  
