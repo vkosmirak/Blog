@@ -119,6 +119,22 @@ if table.name.contains("OCE__DataChange__c") ||
 ### Skip Attachment & ContentDocumentLink tables (speed-up sync)
 TODO
 
+### OCE frash project instalation
+
+1. Install only once (OCE-25412)
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" argv --force-curl
+brew install node yarn watchman
+npm install -g react-native-cli
+```
+2. `cd crm/ios`
+3. `sh OCE.xctemplate/install-react-tools.sh`
+4. `pod install`
+> If build fails:   
+> 1) copy content of `jetfire` in pod  
+> 2) `OS/log.h -> os/log.h`  
+> 3) Check if cocoapods version `pod --version` same as in `Pod.lock`
+
 
 ### Skip visibility loading (speed up background sync)
 Comment LoadDataOperation.swift 173  
