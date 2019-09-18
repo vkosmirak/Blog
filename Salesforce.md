@@ -134,6 +134,7 @@ npm install -g react-native-cli
 > 1) copy content of `jetfire` in pod  
 > 2) `OS/log.h -> os/log.h`  
 > 3) Check if cocoapods version `pod --version` same as in `Pod.lock`
+> 4) Remove node_modules/pods folder and reinstall
 
 
 ### Skip visibility loading (speed up background sync)
