@@ -134,6 +134,26 @@ if table.name.contains("OCE__DataChange__c") ||
 }
 ```
 
+### Skip Sync errors
+DownloadManager.swift 510
+```
+throw  result.error ?? SyncError.Unknown(message: " Cannot get SOQL response ")
+->
+OCELogError("\(result.error)")
+return
+```
+Consiqence: instead of failing sync, it will be finished without table saved
+
+Example of error:
+```
+{
+   errorCode = "INVALID_FIELD";
+   message = "\nCreatedById,OCE__ActualCap__c,TPI_Product__c,Name,OCE__JobId__c\n                              ^\n
+   ERROR at Row:1:Column:114\nNo such column 'TPI_Product__c' on entity 'OCE__ActivityPlan__c'. If you are attempting to use a custom field, be sure to append the '__c' after the custom field name. Please reference your WSDL or the describe call for the appropriate names.";
+}
+```
+
+
 ### Skip Attachment & ContentDocumentLink tables (speed-up sync)
 TODO
 
