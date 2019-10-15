@@ -66,6 +66,24 @@ CreatedById = '0051r000009Kob0AAC' AND
 CreatedDate > 2019-05-16T06:45:00.000Z
 ORDER BY CreatedDate ASC NULLS FIRST
 ```
+
+
+### Get all sync stransactions modified the object
+```
+SELECT CreatedById, CreatedDate, Id, Name, OCE__DependentOfflineIds__c, OCE__Status__c, 
+OCE__LastRunLog__c, isDeleted,
+(SELECT id, OCE__Log__c from OCE__SyncTransactionLogs__r),
+(SELECT id, OCE__EntityType__c, OCE__Operation__c, OCE__Data__c, OCE__ProcessedRecordId__c, OCE__Order__c from OCE__SyncTransactionItems__r)
+FROM OCE__SyncTransaction__c
+WHERE  Id IN (
+   SELECT OCE__SyncTransaction__c 
+   FROM OCE__SyncTransactionItem__c
+   WHERE OCE__ProcessedRecordId__c = 'a1B6E000000fpDNUAY'
+)
+ORDER BY CreatedDate
+```
+
+
 ---
 </p>
 </details>
