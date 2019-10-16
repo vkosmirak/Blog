@@ -36,7 +36,7 @@ Setup -> Custom Metadata Types -> DB Schema -> Manage Records -> Call -> Find fi
 > How to add field:  
 > Call -> Edit -> Deselect 'Active' -> Save -> Clone -> Add field at the end -> Select 'Active' -> Save
 
-## Workbench
+# Workbench
 
 ### Get all users
 ```
@@ -114,7 +114,7 @@ ORDER BY CreatedDate ASC NULLS FIRST
 ```
 
 
-## iOS 
+# iOS 
 
 ### Load specific Metadata version
 SelectTerritoryBaseOperation.swift  
@@ -174,7 +174,7 @@ Example of error:
 ### Skip Attachment & ContentDocumentLink tables (speed-up sync)
 TODO
 
-### OCE frash project instalation
+### OCE fresh project instalation
 
 1. Install only once (OCE-25412)
 ```
