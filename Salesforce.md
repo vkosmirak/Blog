@@ -117,7 +117,21 @@ ORDER BY CreatedDate ASC NULLS FIRST
 ## iOS 
 
 ### Load specific Metadata version
-//TODO
+SelectTerritoryBaseOperation.swift  
+Replace if with:  
+`addNextOperationToQueue(syncStep: SyncStep.determineIfNewMetadataAvaliable)`
+
+DetermineIfNewMetadataAvailableOperation.swift
+```
+var request = "SELECT "
+request += "Id, Name," + "Status__c".ns() + "," + "Version__c".ns() + "," + "BaseURL__c".ns() + "," + "MandatoryUpdateDate__c".ns()
+request += " FROM "
+request += "Metadata__c".ns()
+request += " WHERE "
+request += " name = 'MD-000123' "
+```
+
+> Please note, if metadata is too old, sync error may occure, so you need to mock them too (next sections)
 
 ### Skip heavy tables (speed up sync)
 DownloadManager.swift 83
