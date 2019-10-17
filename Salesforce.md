@@ -131,25 +131,7 @@ request += " WHERE "
 request += " name = 'MD-000123' "
 ```
 
-> Please note, if metadata is too old, sync error may occure, so you need to mock them too (next sections)
-
-### Skip heavy tables (speed up sync)
-DownloadManager.swift 83
-```
-if table.name.contains("OCE__DataChange__c") ||
-    table.name.contains("OCE__OptDetail__c") ||
-    table.name.contains("OCE__Opt__c") ||
-    table.name.contains("OCE__DrugDistributionData__c") ||
-    table.name.contains("OCE__XponentSalesData__c") ||
-    table.name.contains("OCE__NextBestMessage__c") ||
-    table.name.hasPrefix("OCE__Order") ||
-    table.name.hasPrefix("OCE__MC") ||
-    table.name.hasPrefix("OCE__Email") ||
-    table.name.hasSuffix("__History") {
-    OCELogDebug("Skipped \(table.name)")
-    continue
-}
-```
+> Please note, if metadata is too old, sync error may occure, so you need to also Skip Sync error
 
 ### Skip Sync errors
 DownloadManager.swift 510
@@ -170,9 +152,23 @@ Example of error:
 }
 ```
 
-
-### Skip Attachment & ContentDocumentLink tables (speed-up sync)
-TODO
+### Skip heavy tables (speed up sync)
+DownloadManager.swift 83
+```
+if table.name.contains("OCE__DataChange__c") ||
+    table.name.contains("OCE__OptDetail__c") ||
+    table.name.contains("OCE__Opt__c") ||
+    table.name.contains("OCE__DrugDistributionData__c") ||
+    table.name.contains("OCE__XponentSalesData__c") ||
+    table.name.contains("OCE__NextBestMessage__c") ||
+    table.name.hasPrefix("OCE__Order") ||
+    table.name.hasPrefix("OCE__MC") ||
+    table.name.hasPrefix("OCE__Email") ||
+    table.name.hasSuffix("__History") {
+    OCELogDebug("Skipped \(table.name)")
+    continue
+}
+```
 
 ### OCE fresh project instalation
 
@@ -281,3 +277,5 @@ if let selectedTerritory = self.territories.first {
 8. Stop on breakpoint
 9. Open simulator folder. Replace `.Data` with `Submitted DB` Folder
 10. Turn off breakpoint and go
+
+
