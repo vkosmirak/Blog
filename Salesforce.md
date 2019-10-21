@@ -247,6 +247,13 @@ public class ASTNodeResult
 > 1. Device not trusted. Solution - `iPad / Settings / General / Profiles & Device Management / Trust`
 > 2. Xcode Missing Support Files - [solution](https://stackoverflow.com/questions/55575782/xcode-missing-support-files-ios-12-2-16e227) 
 
+### Run backward compatibility on device
+1. Run on device v5 code
+2. Run on device v6 code 
+3. Signing with the same creds (you were signed out)
+4. Create passcode and close the app to not proceed init sync
+5. Run again
+
 ### Use Submitted DB
 1. Sign in as admin in iPad
 2. Enable `SIMULATE_OFFLINE`
