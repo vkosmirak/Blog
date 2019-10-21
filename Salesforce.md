@@ -237,7 +237,8 @@ public class ASTNodeResult
 1. Change bundle id to `com.vkosmirak.oce.dev`
 2. Enable automatic signing, select personal team
 3. Build settings / Remove `PROVISIONING_PROFILE` key
-4. `OCE Dev.entitlements` - remove `siri` key
+4. Xcode 10: `OCE Dev.entitlements` - remove `siri` key  
+   Xcode 11: `OCE / OCE Dev / Signing & Capabilities` - remove `siri` 
 5. Insert `SiriService / isSiriShortcutsEnabled()` - `return false`
 6. `OCE / Targets / SyncKit` - enable Automatic signing
 7. Run  
