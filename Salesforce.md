@@ -141,7 +141,7 @@ throw  result.error ?? SyncError.Unknown(message: " Cannot get SOQL response ")
 OCELogError("\(result.error)")
 return
 ```
-Consiqence: instead of failing sync, it will be finished without table saved
+Consiqence: instead of failing sync, it will be finished without failed table saved
 
 Example of error:
 ```
