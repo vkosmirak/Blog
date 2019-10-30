@@ -71,7 +71,11 @@
 ## Mac OS 
 
 1. Take screenshot - `Command + Shift + 4`
+   > Click `Space` to select exect window
+2. Open Sponlight - `Control + Space`
+2. Text Editor > Forvard delete - `fn + delete`
 2. Other in [documentation](https://support.apple.com/en-us/HT201236)
+3. And [here](http://www.howard.edu/technology/docs/mac/Mac%20Keyboard%20Shortcuts.pdf)
 
 ## Sublime
 
