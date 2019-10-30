@@ -85,6 +85,9 @@
 ## Things 3
 1. Add current page to inbox - `Option + Space`
 
+## Copy Less 2
+1. Open clipboard history - `Command + Shift + F`
+
 ## Other:
 ⌘ = Command  
 ⇧ = Shift  
