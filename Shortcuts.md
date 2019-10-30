@@ -75,6 +75,7 @@
 ## Sublime
 
 1. Format JSON - `Command + Control + J`
+2. Don't save (when quite file) - `Command + D`
 
 ## Tower
 
