@@ -71,6 +71,7 @@
 ## Mac OS 
 
 1. Take screenshot - `Command + Shift + 4`
+2. Other in [documentation](https://support.apple.com/en-us/HT201236)
 
 ## Sublime
 
