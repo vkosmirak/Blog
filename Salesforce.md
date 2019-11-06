@@ -237,6 +237,13 @@ ASTOperations.swift 1085
 public class ASTNodeResult
 ```
 
+### Instal older version of Cocoapods
+```
+sudo gem uninstall cocoapods
+sudo gem install cocoapods -v 1.7.5
+pod --version
+```
+
 ### Run on device
 1. Change bundle id to `com.vkosmirak.oce.dev`
 2. Enable automatic signing, select personal team
