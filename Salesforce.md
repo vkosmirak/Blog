@@ -249,7 +249,7 @@ pod --version
 2. Enable automatic signing, select personal team
 3. Build settings / Remove `PROVISIONING_PROFILE` key
 4. Xcode 10: `OCE Dev.entitlements` - remove `siri` key  
-   Xcode 11: `OCE / OCE Dev / Signing & Capabilities` - remove `siri` 
+   Xcode 11.1: `OCE / OCE Dev / Signing & Capabilities` - remove `siri` 
 5. Insert `SiriService / isSiriShortcutsEnabled()` - `return false`
 6. `OCE / Targets / SyncKit` - enable Automatic signing
 7. Run  
@@ -257,6 +257,7 @@ pod --version
 > Possible issues:
 > 1. Device not trusted. Solution - `iPad / Settings / General / Profiles & Device Management / Trust`
 > 2. Xcode Missing Support Files - [solution](https://stackoverflow.com/questions/55575782/xcode-missing-support-files-ios-12-2-16e227) 
+> 3. Signing problem in Xcode 11.2 - use Xcode 11.1
 
 ### Run backward compatibility on device
 1. Run on device v5 code
