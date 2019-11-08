@@ -87,7 +87,6 @@ WHERE  Id IN (
 ORDER BY CreatedDate
 ```
 
-
 ---
 </p>
 </details>
@@ -116,6 +115,13 @@ CreatedById = '0051r000009KobHAAS' AND
 CreatedDate > 2019-05-08T05:00:09.000Z 
 ORDER BY CreatedDate ASC NULLS FIRST
 ```
+
+### Download all table data 
+1. Run Query / Select Bulk CSV / Download
+2. Open existing OCE.db in TablePlus / File / Import / from CSV / Select downloaded file
+3. Select 'Create new table' / Import / Reload data (Command R)
+
+> Here you can search by `OCE__Log__c.OCE__Message__c` or `OCE__SyncTransactionLog__c.OCE__Data__c`
 
 
 # iOS 
