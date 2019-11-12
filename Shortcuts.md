@@ -11,18 +11,15 @@
 4. Clean build folder  -  `Command + Shift + K`
 4. New file  -  `Command + N`
 
-
-
 #### Medium:
 
-1. Search file by name - `Command + Control + O`
+1. Search file/function by name - `Command + Control + O`
 2. Format selected code - `Control + I`
 3. Navigate between tabs - `Command + 1,2,3,..`
 3. Navigate between recent files - `Command + Control + Left/Right`
 3. Show current file in navigation bar - `Command + Shift + J`  
     > Up and Down to reach near classes
 3. Find and replace in file  -  `Command + Option + F`
-3. Go to defenition  -  `Command + Click`
 4. Open new tab - `Command + T`
     > Navigate between tabs - `Control + Tab`
 
