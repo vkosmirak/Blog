@@ -170,6 +170,7 @@ if table.name.contains("OCE__DataChange__c") ||
     table.name.contains("OCE__Opt__c") ||
     table.name.contains("OCE__DrugDistributionData__c") ||
     table.name.contains("OCE__XponentSalesData__c") ||
+    table.name.contains("OCE__Notification__c") ||
     table.name.contains("OCE__NextBestMessage__c") ||
     table.name.hasPrefix("OCE__Order") ||
     table.name.hasPrefix("OCE__MC") ||
