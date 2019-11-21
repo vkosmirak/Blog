@@ -101,7 +101,8 @@ OCE__DeviceID__c,OCE__DeviceType__c,OCE__Origin__c, OCE__OSNameVersion__c, isDel
 FROM OCE__Log__c 
 WHERE 
 CreatedById = '0051r0000095GtFAAU' AND 
-CreatedDate > 2019-01-24T05:02:31.000Z
+CreatedDate > 2019-01-24T05:02:31.000Z AND
+OCE__Where__c != 'TranslationServiceProtocol localizedString(key:defaultValue:) 53' AND
 ORDER BY CreatedDate ASC NULLS FIRST
 ```
 
