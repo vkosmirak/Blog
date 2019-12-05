@@ -271,6 +271,19 @@ pod --version
 > 2. Xcode Missing Support Files - [solution](https://stackoverflow.com/questions/55575782/xcode-missing-support-files-ios-12-2-16e227) 
 > 3. Signing problem in Xcode 11.2 - use Xcode 11.1
 
+
+###  Performance tip (how to parallelly use few simulators)
+
+1. Working on task A in simulator A
+2. -- Need to log in in another Org in simulator B --
+3. Xcode / target / select another simulator
+4. Run without build (`Command + Control + R`) - it is fast
+5. Xcode / Debug / Detach from OCE Dev
+6. Return to your Simulator 1,  Run without build 
+7. Now you have two simulators, one active for current task A, another background for task B
+8. You spent less then a minute for this
+9. To quickly switch, just change simulator and use `Command + Control + R`
+
 ### Run backward compatibility on device
 1. Run on device v5 code
 2. Run on device v6 code 
