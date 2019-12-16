@@ -109,10 +109,10 @@ ORDER BY CreatedDate ASC NULLS FIRST
 ### Get user's sync statistic
 ```
 SELECT CreatedById,CreatedDate,Id,Name,OCE__AppVersion__c,OCE__DeviceId__c,OCE__iosVersion__c,
-OCE__MetadataVersion__c, OCE__NetworkType__c,OCE__SyncTrigger__c, OCE__DownloadComplete__c,
-OCE__DownloadStart__c, OCE__DownloadEnd__c, OCE__DownloadRecords__c, OCE__DownloadUpdatedRecords__c,
-OCE__UploadComplete__c, OCE__UploadStart__c, OCE__UploadEnd__c, OCE__UploadDuration__c, 
-OCE__UploadRecords__c, IsDeleted
+OCE__MetadataVersion__c, OCE__NetworkType__c,OCE__SyncTrigger__c, OCE__SyncStatisticsData__c, 
+OCE__DownloadComplete__c, OCE__DownloadStart__c, OCE__DownloadEnd__c, OCE__DownloadRecords__c, 
+OCE__DownloadUpdatedRecords__c, OCE__UploadComplete__c, OCE__UploadStart__c, OCE__UploadEnd__c, 
+OCE__UploadDuration__c, OCE__UploadRecords__c, IsDeleted
 FROM OCE__SyncStatistics__c 
 WHERE 
 CreatedById = '0051r000009KobHAAS' AND 
