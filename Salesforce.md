@@ -223,9 +223,25 @@ Select one or more variables:
  - `SKIP_PIN_SCREEN`, `SKIP_APP_UPDATE_ALERT`, `SKIP_NEW_METADATA_ALERT`  
 
 ### Show all LAC iOS-Javascript requests
-LACEngine.swift 97
+LACEngine.swift 162
 ```
 debugPrint(#file, #function, requestName, params, json)
+```
+
+### Show all Salesforce API Apex requests/responses
+SalesforceApi.swift 225
+```
+//Before if let params = queryParams {
+debugPrint("\(method) \(method.rawValue) \(path)")
+
+//Inside if let params = queryParams {
+debugPrint(NSString(data: try! JSONSerialization.data(withJSONObject: params, options: [.prettyPrinted]), encoding: String.Encoding.utf8.rawValue)!)
+
+// Inside if let err = err {
+debugPrint(err)
+
+//Indide onSuccess: { data, _ in
+debugPrint(data ?? Data())
 ```
 
 ### Show all AST requests
