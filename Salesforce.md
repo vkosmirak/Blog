@@ -288,7 +288,7 @@ pod --version
 > 3. Signing problem in Xcode 11.2 - use Xcode 11.1
 
 
-###  Performance tip (how to parallelly use few simulators)
+### Performance tip (how to parallelly use few simulators)
 
 1. Working on task A in simulator A
 2. -- Need to log in in another Org in simulator B --
@@ -307,10 +307,10 @@ pod --version
 4. Create passcode and close the app to not proceed init sync
 5. Run again
 
-### Use Submitted DB
+### Install Submitted DB
 1. Sign in as admin in iPad
 2. Enable `SIMULATE_OFFLINE`
-3. Add next code somewhere
+3. Add next code in OCE and Core targets
 ```
 extension String {
     init?(optional: String) {
@@ -320,8 +320,8 @@ extension String {
 ```
 4. Hardcode all user id, profile id and org id    
 ```
-SFUserAccountManager.sharedInstance().currentUser?.idData?.userId -> String(optional: "0051r000009ZCAjAAO")
-SFUserAccountManager.sharedInstance().currentUser?.idData?.orgId -> String(optional: "00D1r000000pnJMEAY")
+UserAccountManager.shared.currentUserAccount?.idData?.userId -> String(optional: "0051r000009ZCAjAAO")
+UserAccountManager.shared.currentUserAccount?.idData?.orgId -> String(optional: "00D1r000000pnJMEAY")
 ```
 5. Insert in `User.swift 76` (end of init)
 ```
@@ -333,10 +333,56 @@ if let selectedTerritory = self.territories.first {
     }
 }       
 ```
+6. If needs to show all calls in planner, remove terriroty check in next files: `CalendarEventsMirrorQueryComposer`, `CalendarEventsDefaultQueryComposer`, `CalendarEventsCombinedQueryComposer`
 6. Set breakpoint in `application(didFinishLaunchingWithOptions)`
 7. Run
 8. Stop on breakpoint
 9. Open simulator folder. Replace `.Data` with `Submitted DB` Folder
 10. Turn off breakpoint and go
 
+### Install Submitted DB in device
 
+1. Do 'Install Submitted DB' and 'Run on device'
+2. Drag & drop folder in project / Selecte 'Create folder references'
+3. Insert next code in `AppDelegate` `application(didFinishLaunchingWithOptions)`
+    <details><summary>Code</summary>
+    <p>
+
+    `replaceSubmittedDB(folderName: "HILDE VERHEYDEN-D10E0A2D-2D33-4E5B-982F-CB4D2DE1EDAD")`
+
+    ```
+    func replaceSubmittedDB(folderName: String) {
+        
+        guard let folderUrl = Bundle.core.resourceURL?.appendingPathComponent(folderName) else { return }
+        
+        let fileManager = FileManager.default
+        
+        guard fileManager.fileExists(atPath: folderUrl.path) else {
+            debugPrint(#function, "Error: Folder does not exist in bundle", folderName)
+            return
+        }
+        
+        let storageURL = Utility.getProtectedDirectory()
+        
+        if fileManager.fileExists(atPath: storageURL.path) {
+            do {
+                try fileManager.removeItem(at: storageURL)
+            } catch {
+                debugPrint(#function, "Error: Cannot backup folder", folderName, error)
+                return
+            }
+        }
+        
+        do {
+            try fileManager.copyItem(at: folderUrl, to: storageURL)
+        } catch {
+            debugPrint(#function, "Error: Cannot move folder", folderName, error)
+            return
+        }
+        
+        debugPrint("Successfully replaced Submitted DB!", storageURL)
+    }
+    ```
+    </p>
+    </details>
+4. Done
