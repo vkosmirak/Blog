@@ -148,7 +148,8 @@ request += " name = 'MD-000123' "
 > Please note, if metadata is too old, sync error may occure, so you need to also Skip Sync error
 
 ### Skip Sync errors
-DownloadManager.swift 510
+1. Skip salesforce loading errors:  
+`DownloadManager.swift` `getAllNextRequests(for`
 ```
 throw  result.error ?? SyncError.Unknown(message: " Cannot get SOQL response ")
 ->
@@ -165,21 +166,30 @@ Example of error:
    ERROR at Row:1:Column:114\nNo such column 'TPI_Product__c' on entity 'OCE__ActivityPlan__c'. If you are attempting to use a custom field, be sure to append the '__c' after the custom field name. Please reference your WSDL or the describe call for the appropriate names.";
 }
 ```
+2. Skip network/time out errors:    
+`DownloadManager.swift` `scheduleDownload(for`  
+Comment catch block
+```
+            } catch {
+//                self.syncError = error
+//                self._networkRequestQueue.cancelAllOperations()
+//                self._processRecordsOperationQueue.cancelAllOperations()
+            }
+ ```
 
 ### Skip heavy tables (speed up sync)
 DownloadManager.swift 83
 ```
-if table.name.contains("OCE__DataChange__c") ||
-    table.name.contains("OCE__OptDetail__c") ||
-    table.name.contains("OCE__Opt__c") ||
-    table.name.contains("OCE__DrugDistributionData__c") ||
-    table.name.contains("OCE__XponentSalesData__c") ||
-    table.name.contains("OCE__Notification__c") ||
-    table.name.contains("OCE__NotificationContext__c") ||
-    table.name.contains("OCE__NextBestMessage__c") ||
-    table.name.hasPrefix("OCE__Order") ||
-    table.name.hasPrefix("OCE__MC") ||
-    table.name.hasPrefix("OCE__Email") ||
+if table.name.contains("DataChange__c") ||
+    table.name.contains("OptDetail__c") ||
+    table.name.contains("Opt__c") ||
+    table.name.contains("DrugDistributionData__c") ||
+    table.name.contains("XponentSalesData__c") ||
+    table.name.contains("Notification__c") ||
+    table.name.contains("NotificationContext__c") ||
+    table.name.contains("NextBestMessage__c") ||
+    table.name.contains("Order") ||
+    table.name.contains("Email") ||
     table.name.hasSuffix("__History") {
     OCELogDebug("Skipped \(table.name)")
     continue
