@@ -171,6 +171,7 @@ Example of error:
 Comment catch block
 ```
             } catch {
+                  OCELogError("\(error)")
 //                self.syncError = error
 //                self._networkRequestQueue.cancelAllOperations()
 //                self._processRecordsOperationQueue.cancelAllOperations()
