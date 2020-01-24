@@ -44,7 +44,7 @@ Setup -> Custom Metadata Types -> DB Schema -> Manage Records -> Call -> Find fi
 
 ### Get all users
 ```
-SELECT Email,Id,Name FROM User
+SELECT Id, Name, Username, Email FROM User
 ```
 
 ### Get sync transaction details
