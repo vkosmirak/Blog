@@ -246,7 +246,7 @@ SalesforceApi.swift 225
 debugPrint("\(method) \(method.rawValue) \(path)")
 
 //Inside if let params = queryParams {
-debugPrint(NSString(data: try! JSONSerialization.data(withJSONObject: params, options: [.prettyPrinted]), encoding: String.Encoding.utf8.rawValue)!)
+debugPrint(NSString(data: try! JSONSerialization.data(withJSONObject: params, options: [.prettyPrinted]), encoding: String.Encoding.utf8.rawValue)!) //swiftlint:disable:this force_unwrapping
 
 // Inside if let err = err {
 debugPrint(err)
