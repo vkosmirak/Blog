@@ -40,6 +40,13 @@ Setup -> Custom Metadata Types -> DB Schema -> Manage Records -> Call -> Find fi
 > How to add field:  
 > Call -> Edit -> Deselect 'Active' -> Save -> Clone -> Add field at the end -> Select 'Active' -> Save
 
+#### How to upload CLM presentation:
+1. Admin console / CLM / Presentations / Bulk Presentation Upload
+2. Add .zip presentation (If has, add all assets e.g. PDF) 
+3. Upload / Next / Next / Add Presentation name / Finish
+4. Open presentation / Edit / Allow unaligned selection / Select territory / Save / Activate
+
+
 # Workbench
 
 ### Get all users
