@@ -232,6 +232,10 @@ Add next line in `UserSevice.swift` 28 48, `SharedUserSettings.swift` 58 68
 return UserService.defaultLanguage
 ```
 
+### Force Metadata reload from source
+Hardcode to `true`  
+`ApplicationCoordinator`.`metadataFailedToLoad`
+
 ### Xcode debug tricks
 Xcode / Target / Edit scheme (Command+Alt+R - ⌘⌥R)  
 Select one or more variables:
