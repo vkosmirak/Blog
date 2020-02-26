@@ -215,6 +215,9 @@ npm install -g react-native-cli
 2. `cd crm/ios`
 3. `sh OCE.xctemplate/install-react-tools.sh`
 4. `pod install`
+5. For 6.1 version you also need in `react/package.json` 
+   1) remove line with `apollorndesignsystem`
+   2) insert line `"react-native-linear-gradient": "2.5.6",`
 > If build fails:   
 > 1) copy content of `jetfire` in pod  
 > 2) `OS/log.h -> os/log.h`  
