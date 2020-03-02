@@ -67,6 +67,8 @@ Install certificates
 
 ### Terminal:
 1. install cocoa pods (`sudo gem install cocoapods`)
+1. install fastlane (TODO)
+2. install swiftlint (`brew install swiftlint`
 
 ### Sublime:
 1. Command + shift + P
