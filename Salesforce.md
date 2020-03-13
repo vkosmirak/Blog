@@ -28,6 +28,20 @@ Submission date: ~ 6/20/2019
 ```
 > Expected format `db/CELINE GUILLAUME-C8065E8A-3446-450A-9928-603D871B13F3-1561043793.2755141.zip`
 
+
+<details><summary></summary>
+<p>
+    
+### How to get old metadata and Submitted DB from AWS S3
+
+1. Workbench / Utilities / REST Explorer `/services/apexrest/OCE/SecuredConfig`
+2. Copy next keys  `OCE__S3Bucket__c`, `OCE__S3ReadOnlyAccessKey__c`, `OCE__S3ReadOnlySecretKey__c`
+3. Use them in any AWS S3 browser (e.g. ExpandDrive, Cyberduck)
+
+---
+</p>
+</details>
+
 #### Add trusted IP address
 Setup -> Network access -> New -> Add [your IP address](https://www.myip.com)  
 > It needs when you cannot login and see 'Verify you identity (email)' sceen
