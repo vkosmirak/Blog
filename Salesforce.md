@@ -10,37 +10,13 @@ Setup - Installed packages - OCE CRM
 
 #### How to see all changes by admin in the org:
 Setup -> Search -> View Setup Audit Trail
-
-#### Get metadata archive  
-Send next info to @mpetriv or @vlitovka
-```
-Organization: 00D1r000001m3itEAA
-Metadata: MD-000048
-Profile: THX Rep
-```
-
-#### Get Submitted DB
-Send next info to @mpetriv or @vlitovka
-```
-Organization: 00D1r000001m3itEAA
-Accunt name: CELINE GUILLAUME
-Submission date: ~ 6/20/2019 
-```
-> Expected format `db/CELINE GUILLAUME-C8065E8A-3446-450A-9928-603D871B13F3-1561043793.2755141.zip`
-
-
-<details><summary></summary>
-<p>
     
-### How to get old metadata and Submitted DB from AWS S3
+#### How to get old metadata and Submitted DB from AWS S3
 
 1. Workbench / Utilities / REST Explorer `/services/apexrest/OCE/SecuredConfig`
 2. Copy next keys  `OCE__S3Bucket__c`, `OCE__S3ReadOnlyAccessKey__c`, `OCE__S3ReadOnlySecretKey__c`
 3. Use them in any AWS S3 browser (e.g. ExpandDrive, Cyberduck)
-
----
-</p>
-</details>
+4. Find folder with org id (`select id from organisation`)
 
 #### Add trusted IP address
 Setup -> Network access -> New -> Add [your IP address](https://www.myip.com)  
