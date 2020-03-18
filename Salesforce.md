@@ -15,7 +15,7 @@ Setup -> Search -> View Setup Audit Trail
 
 1. Workbench / Utilities / REST Explorer `/services/apexrest/OCE/SecuredConfig`
 2. Copy next keys  `OCE__S3Bucket__c`, `OCE__S3ReadOnlyAccessKey__c`, `OCE__S3ReadOnlySecretKey__c`
-3. Use them in any AWS S3 browser (e.g. ExpandDrive, Cyberduck)
+3. Use them in any AWS S3 browser (e.g. Cyberduck, ExpandDrive)
 4. Find folder with org id (`select id from organisation`)
 
 #### Add trusted IP address
