@@ -117,6 +117,17 @@ CreatedDate > 2019-05-08T05:00:09.000Z
 ORDER BY CreatedDate ASC NULLS FIRST
 ```
 
+### Get user record access
+```
+SELECT 
+RecordId, MaxAccessLevel, HasAllAccess, HasDeleteAccess,
+HasEditAccess, HasReadAccess, HasTransferAccess 
+FROM UserRecordAccess 
+WHERE 
+UserId = '0051t000003L8mdAAC' AND 
+RecordId = '0012o00002eO93gAAC'
+```
+
 ### Download all table data 
 1. Run Query / Select Bulk CSV / Download
 2. Open existing OCE.db in TablePlus / File / Import / from CSV / Select downloaded file
