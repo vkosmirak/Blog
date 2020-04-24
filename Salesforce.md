@@ -291,6 +291,84 @@ ASTOperations.swift 1085
 public class ASTNodeResult
 ```
 
+### Debug FTS (SQL full text search)
+1. Use next query example
+   <details><summary>Code</summary>
+    <p>
+    
+    ```
+        SELECT
+        account.name,
+    --     account.firstname,
+    --     account.lastname,
+    --     account.oce__accountfullname__c,
+    --     account.az_id__c,
+        account.az_parent1__c,
+        account.oce__specialty__c,
+        
+        oce__accountterritoryfields__c.az_target__c,
+    --     oce__accountterritoryfields__c.az_sales_direction__c,
+        
+    --     oce__address__c.id,
+        oce__address__c.name,
+        oce__address__c.oce__city__c,
+        oce__address__c.oce__statecode__c,
+        oce__address__c.oce__zipcode__c,
+        oce__address__c.oce__brick__c
+    FROM
+        Account
+        LEFT JOIN recordtype ON recordtype.uid == Account.recordtypeid
+        LEFT JOIN oce__accountterritoryfields__c ON oce__accountterritoryfields__c.oce__account__c = Account.uid
+        LEFT JOIN OCE__accountaddress__c ON OCE__accountaddress__c.OCE__account__c = Account.uid
+        LEFT JOIN OCE__address__c ON OCE__address__c.id = OCE__accountaddress__c.oce__address__c
+    WHERE
+        recordtype.ispersontype == 1
+        AND(([account].rowid IN(
+                SELECT
+                    docid FROM fts_account
+                WHERE
+                    fts_account MATCH 'no*')
+                OR account.rowid IN(
+                    SELECT
+                        account.rowid FROM [account]
+                    WHERE
+                        [account].uid in(
+                            SELECT
+                                OCE__accountaddress__c.OCE__account__c FROM OCE__accountaddress__c
+                            WHERE
+                                oce__address__c IN(
+                                    SELECT
+                                        oce__address__c.uid FROM [oce__address__c]
+                                    WHERE
+                                        oce__address__c.rowid IN(
+                                            SELECT
+                                                docid FROM fts_oce__address__c
+                                            WHERE
+                                                fts_oce__address__c MATCH 'no*'))))
+                                OR [account].uid IN(
+                                    SELECT
+                                        OCE__Account__c FROM [oce__accountterritoryfields__c]
+                                    WHERE
+                                        oce__accountterritoryfields__c.rowid IN(
+                                            SELECT
+                                                docid FROM fts_oce__accountterritoryfields__c
+                                            WHERE
+                                                fts_oce__accountterritoryfields__c MATCH 'no*'))))
+    GROUP BY
+        Account.uid
+    ORDER BY
+        Account.OCE__AccountFullName__c IS NULL, Account.OCE__AccountFullName__c ASC, Account.Name IS NULL, Account.Name ASC
+    LIMIT 10
+    ```
+
+    </p>
+    </details>
+    
+2. Add correct fields to `SELECT` from `fts` tables
+3. Note - state code is an abreviatura. e.g. `MN -> Minnesota`. Find it in `sobjects.json`
+4. Note - user may have few addresses. I received another when only take `fts_oce__address__c` in `where`. Not sure why, as both were not primary
+5. Why it may be needed? See OCE-46257
+
 ### Instal older version of Cocoapods
 ```
 sudo gem uninstall cocoapods
