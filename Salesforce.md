@@ -131,7 +131,7 @@ RecordId = '0012o00002eO93gAAC'
 
 ### Get large number of records as .CSV file 
 1. Run Query / Select Bulk CSV / Download
-1. It's recommended to use limit (e.g. `LIMIT 10000`)
+1. It's recommended to use where and limit (e.g. `LIMIT 10000`)
 1. Now you can Command+F through big `.CSV` text file in Sublime
 1. To add it to SQLite DB:
 2. Open existing OCE.db in TablePlus / File / Import / from CSV / Select downloaded file
