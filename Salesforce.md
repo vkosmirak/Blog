@@ -57,7 +57,7 @@ WHERE id = 'a331r000003wbBtAAI'
 <details><summary>more</summary>
 <p>
     
-### Get user's sync stransactions
+### Get user's all sync transactions
 
 ```
 SELECT CreatedById, CreatedDate, Id, Name, OCE__DependentOfflineIds__c, OCE__Status__c , OCE__LastRunLog__c, OCE__LastRunLog__r.OCE__Log__c, isDeleted,
@@ -65,9 +65,9 @@ SELECT CreatedById, CreatedDate, Id, Name, OCE__DependentOfflineIds__c, OCE__Sta
 OCE__ProcessedRecordId__c, OCE__EntityId__c, OCE__Order__c from OCE__SyncTransactionItems__r)
 FROM OCE__SyncTransaction__c
 WHERE 
-CreatedById = '0051r000009Kob0AAC' AND
-CreatedDate > 2019-05-16T06:45:00.000Z
-ORDER BY CreatedDate ASC NULLS FIRST
+CreatedById = '0051r000009Kob0AAC' 
+ORDER BY CreatedDate DESC
+LIMIT 1000
 ```
 
 
@@ -97,10 +97,10 @@ SELECT CreatedById,CreatedDate,Id,Name,OCE__Level__c,OCE__Message__c,OCE__Where_
 OCE__DeviceID__c,OCE__DeviceType__c,OCE__Origin__c, OCE__OSNameVersion__c, isDeleted
 FROM OCE__Log__c 
 WHERE 
-CreatedById = '0051r0000095GtFAAU' AND 
-CreatedDate > 2019-01-24T05:02:31.000Z AND
-OCE__Where__c != 'TranslationServiceProtocol localizedString(key:defaultValue:) 53' 
-ORDER BY CreatedDate ASC NULLS FIRST
+CreatedById = '0051r0000095GtFAAU'
+AND OCE__Where__c != 'TranslationServiceProtocol localizedString(key:defaultValue:) 53' 
+ORDER BY CreatedDate DESC 
+LIMIT 1000
 ```
 
 ### Get user's sync statistic
@@ -112,10 +112,11 @@ OCE__DownloadUpdatedRecords__c, OCE__UploadComplete__c, OCE__UploadStart__c, OCE
 OCE__UploadDuration__c, OCE__UploadRecords__c, IsDeleted
 FROM OCE__SyncStatistics__c 
 WHERE 
-CreatedById = '0051r000009KobHAAS' AND 
-CreatedDate > 2019-05-08T05:00:09.000Z 
-ORDER BY CreatedDate ASC NULLS FIRST
+CreatedById = '0051r000009KobHAAS' 
+ORDER BY CreatedDate DESC 
+LIMIT 1000
 ```
+> Remove `OCE__SyncStatisticsData__c` if query is failing (for older orgs)
 
 ### Get user record access
 ```
@@ -128,13 +129,20 @@ UserId = '0051t000003L8mdAAC' AND
 RecordId = '0012o00002eO93gAAC'
 ```
 
-### Download all table data 
+### Get large number of records as .CSV file 
 1. Run Query / Select Bulk CSV / Download
+1. It's recommended to use limit (e.g. `LIMIT 10000`)
+1. Now you can Command+F through big `.CSV` text file in Sublime
+1. To add it to SQLite DB:
 2. Open existing OCE.db in TablePlus / File / Import / from CSV / Select downloaded file
 3. Select 'Create new table' / Import / Reload data (Command R)
 
-> Here you can search by `OCE__Log__c.OCE__Message__c` or `OCE__SyncTransactionLog__c.OCE__Data__c`
-
+### Notes
+1. `LIMIT` is needed sometimes, when queries are failing in workbanch due to large number of records
+1. `AND CreatedDate < 2019-01-24T05:02:31.000Z` - append in `WHERE` narrow search
+1. For search by not searchable fields, use Bulk CSV    
+(e.g. `OCE__Log__c.OCE__Message__c` or `OCE__SyncTransactionLog__c.OCE__Data__c`)
+1. To search for similar errror logs or sync transaction failes, use Bulk CSV    
 
 # iOS 
 
