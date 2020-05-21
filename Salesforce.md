@@ -134,8 +134,8 @@ RecordId = '0012o00002eO93gAAC'
 1. It's recommended to use where and limit (e.g. `LIMIT 10000`)
 1. Now you can Command+F through big `.CSV` text file in Sublime
 1. To add it to SQLite DB:
-2. Open existing OCE.db in TablePlus / File / Import / from CSV / Select downloaded file
-3. Select 'Create new table' / Import / Reload data (Command R)
+   1) Open existing OCE.db in TablePlus / File / Import / from CSV / Select downloaded file
+   2) Select 'Create new table' / Import / Reload data (Command R)
 
 ### Notes
 1. `LIMIT` is needed sometimes, when queries are failing in workbanch due to large number of records
