@@ -139,7 +139,7 @@ RecordId = '0012o00002eO93gAAC'
 
 ### Notes
 1. `LIMIT` is needed sometimes, when queries are failing in workbanch due to large number of records
-1. `AND CreatedDate < 2019-01-24T05:02:31.000Z` - append in `WHERE` narrow search
+1. `AND CreatedDate < 2019-01-24T05:02:31.000Z` - append in `WHERE` to narrow search
 1. For search by not searchable fields, use Bulk CSV    
 (e.g. `OCE__Log__c.OCE__Message__c` or `OCE__SyncTransactionLog__c.OCE__Data__c`)
 1. To search for similar errror logs or sync transaction failes, use Bulk CSV    
