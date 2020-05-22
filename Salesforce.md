@@ -48,7 +48,7 @@ SELECT Id, Name, Username, Email FROM User
 ```
 SELECT CreatedById, CreatedDate, Id, Name, OCE__OfflineUniqueId__c, OCE__DependentOfflineIds__c, 
 OCE__Status__c , OCE__LastRunLog__c, isDeleted,
-(SELECT id, OCE__Log__c from OCE__SyncTransactionLogs__r),
+(SELECT id, OCE__Log__c, OCE__ErrorLocation__c from OCE__SyncTransactionLogs__r),
 (SELECT id, Name, OCE__EntityType__c, OCE__Operation__c, OCE__Data__c, 
 OCE__ProcessedRecordId__c, OCE__EntityId__c, OCE__Order__c from OCE__SyncTransactionItems__r)
 FROM OCE__SyncTransaction__c
@@ -76,7 +76,7 @@ LIMIT 1000
 ```
 SELECT CreatedById, CreatedDate, Id, Name, OCE__OfflineUniqueId__c, OCE__DependentOfflineIds__c, 
 OCE__Status__c, OCE__LastRunLog__c, isDeleted,
-(SELECT id, OCE__Log__c from OCE__SyncTransactionLogs__r),
+(SELECT id, OCE__Log__c, OCE__ErrorLocation__c from OCE__SyncTransactionLogs__r),
 (SELECT id, Name, OCE__EntityType__c, OCE__Operation__c, OCE__Data__c, 
 OCE__ProcessedRecordId__c, OCE__EntityId__c, OCE__Order__c from OCE__SyncTransactionItems__r)
 FROM OCE__SyncTransaction__c
