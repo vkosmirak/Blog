@@ -17,7 +17,7 @@ Setup -> Search -> View Setup Audit Trail
 2. Copy next keys  `OCE__S3Bucket__c`, `OCE__S3ReadOnlyAccessKey__c`, `OCE__S3ReadOnlySecretKey__c`
 3. Use them in any AWS S3 browser (e.g. Cyberduck)
 4. Find folder with org id (`select id from organisation`)
-> Sometimes `Cyberduck` cannot download, for example from China regions. In this case you need to use AWS CLI in terminal
+> Sometimes `Cyberduck` cannot download files, for example from China regions. In this case you need to use AWS CLI in terminal
 
 <details><summary>Use AWS CLI</summary>
 <p>
