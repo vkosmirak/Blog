@@ -15,8 +15,54 @@ Setup -> Search -> View Setup Audit Trail
 
 1. Workbench / Utilities / REST Explorer `/services/apexrest/OCE/SecuredConfig`
 2. Copy next keys  `OCE__S3Bucket__c`, `OCE__S3ReadOnlyAccessKey__c`, `OCE__S3ReadOnlySecretKey__c`
-3. Use them in any AWS S3 browser (e.g. Cyberduck, ExpandDrive)
+3. Use them in any AWS S3 browser (e.g. Cyberduck)
 4. Find folder with org id (`select id from organisation`)
+> Sometimes `Cyberduck` cannot download, for example from China regions. In this case you need to use AWS CLI in terminal
+
+<details><summary>Use AWS CLI</summary>
+<p>
+    
+1. Workbench / Utilities / REST Explorer `/services/apexrest/OCE/SecuredConfig`
+    
+```
+{
+  "attributes" : {
+    "type" : "OCE__OCESecuredConfig__c"
+  },
+  "OCE__S3ReadOnlyAccessKey__c" : "ACCESS_KEY_1111111111111”,
+  "OCE__S3ReadOnlySecretKey__c" : "SECRET_KEY_222222222222222222222222222222222”,
+  "OCE__S3Bucket__c" : "BUCKET”,
+  "OCE__S3BucketRegion__c" : "BUCKET_REGION”,
+   …
+}
+```
+2. Install AWS CLI ([documentation](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html))
+3. Do in terminal
+```
+aws configure
+   AWS Access Key ID:  ACCESS_KEY_1111111111111
+   AWS Secret Access Key:  SECRET_KEY_222222222222222222222222222222222
+   Default region name: BUCKET_REGION
+   Default output format: text
+```
+4. List folders:
+```
+aws s3 ls s3://BUCKET/
+aws s3 ls s3://BUCKET/00D2v0000014FnO/
+aws s3 ls s3://BUCKET/00D2v0000014FnO/MD-000082/
+aws s3 ls s3://BUCKET/00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip' 
+```
+> Note: `/` is required in the end
+
+5. Download file:
+```
+aws s3api get-object --bucket BUCKET --key 00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip'  Desktop/'NNAAMEO Core Sales Rep.zip'
+```
+Last parameter: file path to save
+
+---
+</p>
+</details>
 
 #### Add trusted IP address
 Setup -> Network access -> New -> Add [your IP address](https://www.myip.com)  
