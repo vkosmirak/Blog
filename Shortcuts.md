@@ -10,6 +10,8 @@
 5. Build/Run - `Command + B/R`
 4. Clean build folder  -  `Command + Shift + K`
 4. New file  -  `Command + N`
+4. SwiftUI open preview - `Command + Option + Enter`
+4. SwiftUI run preview - `Command + Option + P`
 
 #### Medium:
 
