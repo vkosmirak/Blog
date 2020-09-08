@@ -57,6 +57,8 @@ aws s3 ls s3://BUCKET/00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip'
 5. Download file:
 ```
 aws s3api get-object --bucket BUCKET --key 00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip'  Desktop/'NNAAMEO Core Sales Rep.zip'
+or
+s s3api get-object --bucket BUCKET --key 00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip'  /Users/vkosmirak/Desktop/test.zip
 ```
 Last parameter: file path to save
 
@@ -286,7 +288,7 @@ Comment LoadDataOperation.swift 173
 Consiqence: records will not be deleted if deleted in Salesforce
 
 ### Force English localization
-Add next line in `UserSevice.swift` 28 48, `SharedUserSettings.swift` 58 68
+Add next line in `UserService.swift` 28 48, `SharedUserSettings.swift` 58 68
 ```
 return UserService.defaultLanguage
 ```
