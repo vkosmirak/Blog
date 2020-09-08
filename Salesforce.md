@@ -58,7 +58,7 @@ aws s3 ls s3://BUCKET/00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip'
 ```
 aws s3api get-object --bucket BUCKET --key 00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip'  Desktop/'NNAAMEO Core Sales Rep.zip'
 or
-s s3api get-object --bucket BUCKET --key 00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip'  /Users/vkosmirak/Desktop/test.zip
+aws s3api get-object --bucket BUCKET --key 00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip'  /Users/vkosmirak/Desktop/test.zip
 ```
 Last parameter: file path to save
 
