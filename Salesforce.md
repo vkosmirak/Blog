@@ -56,6 +56,7 @@ aws s3 ls s3://BUCKET/00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip'
 >   1. `/` is required in the end
 >   2. Get ORG id - `select id from organization`
 >   3. Remove latest 3 characters: 00D6g000000FjXQ**EA0** -> 00D6g000000FjXQ
+>   4. Submitted DB folder: `aws s3 ls s3://BUCKET/db/`
 
 
 5. Download file:
