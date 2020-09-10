@@ -61,9 +61,9 @@ aws s3 ls s3://BUCKET/00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip'
 
 5. Download file:
 ```
-aws s3api get-object --bucket BUCKET --key 00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip'  Desktop/'NNAAMEO Core Sales Rep.zip'
+aws s3api get-object --bucket BUCKET --key 00D2v0000014FnO/MD-000082/'NNAAMEO Core Sales Rep.zip'  Desktop/'MD-000082 NNAAMEO Core Sales Rep.zip'
 or
-aws s3api get-object --bucket BUCKET --key db/'ABERALDO RIBEIRO GALVAO NETO-Databases-2020-05-22-11-04-54-UserID-0056g000003BQifAAG-OrgID-00D6g000000FjXQEA0-00000000-0000-0000-0000-000000000000.zip'  /Users/admin/Desktop/SubmittedDB.zip
+aws s3api get-object --bucket BUCKET --key db/'ABERALDO RIBEIRO GALVAO NETO-Databases-2020-05-22-11-04-54-UserID-0056g000003BQifAAG-OrgID-00D6g000000FjXQEA0-00000000-0000-0000-0000-000000000000.zip'  /Users/admin/Desktop/DB.zip
 ```
 Last parameter: file path to save
 
