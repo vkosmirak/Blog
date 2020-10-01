@@ -31,8 +31,8 @@ Setup -> Search -> View Setup Audit Trail
   },
   "OCE__S3ReadOnlyAccessKey__c" : "ACCESS_KEY_1111111111111”,
   "OCE__S3ReadOnlySecretKey__c" : "SECRET_KEY_222222222222222222222222222222222”,
-  "OCE__S3Bucket__c" : "BUCKET”,
   "OCE__S3BucketRegion__c" : "BUCKET_REGION”,
+  "OCE__S3Bucket__c" : "BUCKET”,
    …
 }
 ```
@@ -43,7 +43,7 @@ aws configure
    AWS Access Key ID:  ACCESS_KEY_1111111111111
    AWS Secret Access Key:  SECRET_KEY_222222222222222222222222222222222
    Default region name: BUCKET_REGION
-   Default output format: text
+   Default output format: 
 ```
 4. List folders:
 ```
