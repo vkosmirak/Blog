@@ -73,6 +73,7 @@
    > Click `Space` to select exect window
 2. Open Spotlight - `Control + Space`
 2. Text Editor > Forward delete - `fn + delete`
+2. Past without formatting: `Option + Command + Shift + V`
 2. Other in [documentation](https://support.apple.com/en-us/HT201236) and [here](http://www.howard.edu/technology/docs/mac/Mac%20Keyboard%20Shortcuts.pdf)
 
 ## Sublime
