@@ -8,3 +8,4 @@
 
 ### Other
 1. Firebase analytisc - https://academy.realm.io/posts/droidcon-boston-nitya-narasimhan-firebase-analytics-deep-dive
+2. Managing Version Numbers with Fastlane - https://benscheirman.com/2020/10/managing-version-numbers-with-fastlane/
