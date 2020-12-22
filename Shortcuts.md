@@ -48,6 +48,9 @@
 5. Open Enviroment Variables - `Command + Option + R`
 6. Show only errors and hide warnings - `Command + 5`, Right bottom button
 
+> See also:
+> 1. https://tanaschita.com/posts/20190915-basic-xcode-shortcuts/
+> 2. https://tanaschita.com/posts/20190918-advanced-xcode-shortcuts/
 
 ## iOS Simulator
 
