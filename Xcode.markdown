@@ -34,6 +34,12 @@ defaults write http://com.apple .iphonesimulator ShowSingleTouches 1
    expression let $a = 2
    expression a == 2
    ```
+5. Print Dictionary as JSON
+   ```
+   po  NSString(data: try! JSONSerialization.data(withJSONObject: queryParams!, options: [.prettyPrinted]), encoding: String.Encoding.utf8.rawValue)
+   ```
+
+
 
 ### Fast way to print functions in call order:
 ```
@@ -41,3 +47,13 @@ debugPrint(#function, param1, param2)
 ```
 
 
+### Open terminal after pod failed (not completed)
+1. Add this line in Build Phases / Check pods Manifest.lock
+2. after echo:
+3. `osascript -e 'tell app "Terminal" to do script "cd '${PODS_PODFILE_DIR_PATH}'; pod install"'`
+4. Problem: this is cleared after pod installed
+5. Question: can we have workaround?
+6. Alternative command: 
+`open -a Terminal "${PODS_PODFILE_DIR_PATH}"`
+7. Question: can we use post install script
+https://stackoverflow.com/questions/20072937/add-run-script-build-phase-to-xcode-project-from-podspec
