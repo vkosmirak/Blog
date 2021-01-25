@@ -3,6 +3,7 @@
 
 1. SecurePropertyStorage - https://github.com/alexruperez/SecurePropertyStorage
 2. Crash with log - https://mobile.twitter.com/rockbruno_/status/1251112115408195584
+3. Debug Log Optionals without Warnings https://twitter.com/V8tr/status/1351449557037678592?s=20
 
 
 
