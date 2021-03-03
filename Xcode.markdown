@@ -57,3 +57,6 @@ debugPrint(#function, param1, param2)
 `open -a Terminal "${PODS_PODFILE_DIR_PATH}"`
 7. Question: can we use post install script
 https://stackoverflow.com/questions/20072937/add-run-script-build-phase-to-xcode-project-from-podspec
+
+### Make Xcode's Assistant aware of your ViewModels, Views
+See: https://twitter.com/peterfriese/status/1364544309878534144 ([link](https://macos-defaults.com/xcode/ideadditionalcounterpartsuffixes.html#set-to-viewmodel-view))
