@@ -4,6 +4,7 @@
 ## Applications:
 
 ### General:
+- 1password
 - AdGuard
 - Boom 3D
 - CleanMyMac
@@ -15,7 +16,6 @@
 - Wallpaper Wizard
 
 ### Communication:
-- GoToMeeting
 - Skype
 - Slack
 - Spark
@@ -67,8 +67,9 @@ Install certificates
 
 ### Terminal:
 1. install cocoa pods (`sudo gem install cocoapods`)
-1. install fastlane (TODO)
-2. install swiftlint (`brew install swiftlint`
+2. install [homebrew](https://brew.sh/index_uk)
+3. install fastlane (`brew install fastlane`)
+4. install swiftlint (`brew install swiftlint`)
 
 ### Sublime:
 1. Command + shift + P
