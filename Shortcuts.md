@@ -52,6 +52,11 @@
 > 1. https://tanaschita.com/posts/20190915-basic-xcode-shortcuts/
 > 2. https://tanaschita.com/posts/20190918-advanced-xcode-shortcuts/
 > 3. https://habr.com/ru/company/dododev/blog/527740/
+> 
+>
+> Secret internal debug menu  
+> https://twitter.com/onmyway133/status/1380084248829251586
+
 
 ## iOS Simulator
 
@@ -62,7 +67,8 @@
 3. Lock screen - `Command + L`
 4. Take screenshot - `Command + S`
 
-
+> Secret internal debug menu  
+> https://twitter.com/onmyway133/status/1380122939127894017
 
 ## Finder
 
