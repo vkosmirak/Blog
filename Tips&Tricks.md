@@ -16,3 +16,4 @@ All letters will be redirected to `username@gmail.com`
 1. search on site: `site:https://flylib.com/books/en/1.428.1/ searching words`
 2. search document with extension: `filetype:pdf`
 3. search exact frame: `“invalidateLayout(with:”` (in brackets)
+> Use Google like a pro ([link](https://markodenic.com/use-google-like-a-pro/))
