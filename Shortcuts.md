@@ -47,6 +47,7 @@
     > IF: Add else, Add else if  
 5. Open Enviroment Variables - `Command + Option + R`
 6. Show only errors and hide warnings - `Command + 5`, Right bottom button
+7. Open function edit menu `Command + Shift + A`, or  `Command + Control + Click`
 
 > See also:
 > 1. https://tanaschita.com/posts/20190915-basic-xcode-shortcuts/
