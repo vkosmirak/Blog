@@ -103,6 +103,10 @@
 ## Copy Less 2
 1. Open clipboard history - `Command + Shift + F`
 
+## Skype
+1. Hide selected conversation - `Command+E`
+
+
 ## Other:
 ⌘ = Command  
 ⇧ = Shift  
