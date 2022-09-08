@@ -52,6 +52,7 @@
 3. Open spotlight: Control + space
 4. Tree fingers drag (https://support.apple.com/en-us/HT204609)
 5. Terminal green theme (Preferences/Profile/Grass/Default)
+6. Set Sublime 4 as default text editor (https://stackoverflow.com/a/22141204)
 
 
 ### Xcode:
