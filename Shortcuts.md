@@ -95,7 +95,8 @@
 ## Tower
 
 1. Discard changes in selected files - `Command + Shift + Delete`
-2. Other in [webinar](https://zoom.us/recording/play/KfDiP0b8ii7rXFG5pG96vavSDypdl56xqHJeRetDw2ZUhhtRIaxB7KZo4PQh_N_d?startTime=1558457742000) 
+2. Push force - `Control + Command + U`
+3. Other in [webinar](https://zoom.us/recording/play/KfDiP0b8ii7rXFG5pG96vavSDypdl56xqHJeRetDw2ZUhhtRIaxB7KZo4PQh_N_d?startTime=1558457742000) 
 
 ## Things 3
 1. Add current page to inbox - `Option + Space`
