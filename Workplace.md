@@ -72,6 +72,10 @@ Install certificates
 3. install fastlane (`brew install fastlane`)
 4. install swiftlint (`brew install swiftlint`)
 
+### iTerm:
+1. Fix jumps back a word ([how](https://apple.stackexchange.com/a/293988))
+
+
 ### Sublime:
 1. Command + shift + P
 2. Package Control: Install Package
