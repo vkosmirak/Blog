@@ -67,10 +67,12 @@
 Install certificates
 
 ### Terminal:
-1. install cocoa pods (`sudo gem install cocoapods`)
-2. install [homebrew](https://brew.sh/index_uk)
-3. install fastlane (`brew install fastlane`)
-4. install swiftlint (`brew install swiftlint`)
+1. install cocoapods (`sudo gem install cocoapods`)
+   * specific version: `sudo gem install cocoapods -v 1.12.0`
+   * uninstall all other versions `sudo gem uninstall cocoapods`
+3. install [homebrew](https://brew.sh/index_uk)
+4. install fastlane (`brew install fastlane`)
+5. install swiftlint (`brew install swiftlint`)
 
 ### iTerm:
 1. Fix jumps back a word ([how](https://apple.stackexchange.com/a/293988))
