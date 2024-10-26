@@ -6,12 +6,10 @@
 ### General:
 - 1password
 - AdGuard
-- Boom 3D
 - CleanMyMac
 - Google Chrome
 - Grammarly
 - Movist Pro
-- Shazam
 - Things 3
 - Wallpaper Wizard
 
@@ -24,10 +22,7 @@
 
 ### Development:
 - CopyLess 2
-- GPG Keychain
-- Dropbox
 - SimPholders
-- Sketch
 - Sublime (Packages: Markdown, Pretty JSON)
 - Open rdar
 - Postman
@@ -38,10 +33,6 @@
 ### Other:
 - Gestime
 - Kap (video & gif screen recorder)
-- Keynote
-- Numbers
-- Pages
-- TeamViewer
 
 
 ## Configurations:
@@ -73,6 +64,8 @@ Install certificates
 3. install [homebrew](https://brew.sh/index_uk)
 4. install fastlane (`brew install fastlane`)
 5. install swiftlint (`brew install swiftlint`)
+6. create `pods` alias
+   * `open ~/.zshrc`, add in the end `alias pods="pod install --repo-update"`
 
 ### iTerm:
 1. Fix jumps back a word ([how](https://apple.stackexchange.com/a/293988))
