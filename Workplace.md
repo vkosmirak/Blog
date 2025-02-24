@@ -71,6 +71,32 @@ Install certificates
 1. Fix jumps back a word ([how](https://apple.stackexchange.com/a/293988))
 
 
+### Git
+1. Install git hook to automatically append to commit message a prefix - ticket number, parsed from the branch name
+```
+cat << 'EOF' > .git/hooks/prepare-commit-msg && chmod +x .git/hooks/prepare-commit-msg
+#!/bin/bash
+
+# Get the current branch name
+branch_name=$(git rev-parse --abbrev-ref HEAD)
+
+# Extract the last JIRA ticket from the branch name (matches pattern ABC-123456)
+ticket=$(echo "$branch_name" | grep -oE '[A-Z]+-[0-9]+' | tail -n 1)
+
+# File containing the commit message
+commit_msg_file=$1
+
+# Read the commit message
+commit_msg=$(cat "$commit_msg_file")
+
+# Check if the ticket is missing from the commit message
+if [[ -n "$ticket" && ! "$commit_msg" =~ \[$ticket\] ]]; then
+  # Format the commit message as [TICKET] Commit message
+  echo "[$ticket] $commit_msg" > "$commit_msg_file"
+fi
+EOF
+```
+
 ### Sublime:
 1. Command + shift + P
 2. Package Control: Install Package
