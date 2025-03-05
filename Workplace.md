@@ -90,7 +90,7 @@ commit_msg_file=$1
 commit_msg=$(cat "$commit_msg_file")
 
 # Check if the ticket is missing from the commit message
-if [[ -n "$ticket" && ! "$commit_msg" =~ \[$ticket\] ]]; then
+if [[ -n "$ticket" && ! "$commit_msg" =~ ^\[ ]]; then
   # Format the commit message as [TICKET] Commit message
   echo "[$ticket] $commit_msg" > "$commit_msg_file"
 fi
