@@ -75,6 +75,17 @@ alias "pods fix"='pod repo remove trunk'
 ### iTerm:
 1. Fix jumps back a word ([how](https://apple.stackexchange.com/a/293988))
 
+### VScode
+1. Make it a default files open app. in Terminal:
+```
+brew install duti
+duti -s com.microsoft.VSCode public.plain-text all      # .txt
+duti -s com.microsoft.VSCode public.source-code all      # .js, .rb, .py, etc.
+duti -s com.microsoft.VSCode public.json all             # .json
+duti -s com.microsoft.VSCode net.daringfireball.markdown all  # .md
+duti -s com.microsoft.VSCode public.xml all              # .xml, .plist
+duti -s com.microsoft.VSCode public.data all             # all other
+```
 
 ### Git
 1. Install git hook to automatically append to commit message a prefix - ticket number, parsed from the branch name
