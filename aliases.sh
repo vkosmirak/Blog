@@ -42,7 +42,6 @@ xc() {
     fi
   fi
 }
-alias xc=xc
 
 
 # === Update aliases from GitHub ===
