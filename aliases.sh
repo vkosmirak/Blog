@@ -61,7 +61,7 @@ update_aliases() {
     return 1
   fi
 
-  if !grep -qxF '[ -f ~/.aliases.sh ] && source ~/.aliases.sh' ~/.zshrc; then
+  if ! grep -qxF '[ -f ~/.aliases.sh ] && source ~/.aliases.sh' ~/.zshrc; then
      echo "🔧 Adding source line to ~/.zshrc..."
   {
     printf '\n# Load personal aliases (installed via install_aliases)\n'
