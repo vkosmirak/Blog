@@ -43,3 +43,29 @@ xc() {
   fi
 }
 alias xc=xc
+
+
+# === Update aliases from GitHub ===
+# Downloads latest aliases.sh from GitHub and replaces ~/.aliases.sh
+# Ensures it's sourced in ~/.zshrc
+update_aliases() {
+  local url="https://raw.githubusercontent.com/vkosmirak/Blog/master/aliases.sh"
+  local target="$HOME/.aliases.sh"
+
+  echo "⬇️  Downloading latest aliases from GitHub..."
+  if curl -fsSL "$url" -o "$target"; then
+    echo "✅ Saved to $target"
+  else
+    echo "❌ Failed to download aliases from $url"
+    return 1
+  fi
+
+  if ! grep -q 'source ~/.aliases.sh' ~/.zshrc; then
+    echo "🔧 Adding source line to ~/.zshrc..."
+    echo '[ -f ~/.aliases.sh ] && source ~/.aliases.sh' >> ~/.zshrc
+  else
+    echo "✅ ~/.zshrc already sources ~/.aliases.sh"
+  fi
+
+  echo "✅ Done. Run 'source ~/.zshrc' to reload your aliases."
+}
