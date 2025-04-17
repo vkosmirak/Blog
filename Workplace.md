@@ -64,19 +64,7 @@ Install certificates
 3. install [homebrew](https://brew.sh/index_uk)
 4. install fastlane (`brew install fastlane`)
 5. install swiftlint (`brew install swiftlint`)
-6. create `pods` aliases
-   * `open ~/.zshrc`, add next lines in the end
-```
-alias xc='open "$(find . -maxdepth 1 -name "*.xcworkspace" | head -n 1)"'
-alias pods='pod install --repo-update && xc'
-alias "pods fix"='pod repo remove trunk'
-
-alias s7s="pkill -x Xcode; s7 reset --all; s7 checkout; pods; xc"
-
-xcb() {
-    cat "$1" | xcbeautify
-}
-```
+6. install aliases (see `aliases.sh`)
 
 ### iTerm:
 1. Fix jumps back a word ([how](https://apple.stackexchange.com/a/293988))
