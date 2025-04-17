@@ -44,6 +44,29 @@ xc() {
 }
 
 
+# === Install aliases file if downloaded manually ===
+# Ensures ~/.aliases.sh is sourced in .zshrc and loaded now
+install_aliases() {
+  local target="$HOME/.aliases.sh"
+
+  if [ ! -f "$target" ]; then
+    echo "❌ $target not found. Please download aliases.sh first."
+    return 1
+  fi
+
+  if ! grep -qxF '[ -f ~/.aliases.sh ] && source ~/.aliases.sh' ~/.zshrc; then
+    echo "🔧 Adding source line to ~/.zshrc..."
+    printf '\n[ -f ~/.aliases.sh ] && source ~/.aliases.sh\n' >> ~/.zshrc
+  else
+    echo "✅ ~/.zshrc already sources ~/.aliases.sh"
+  fi
+
+  echo "🔄 Sourcing ~/.aliases.sh into current shell..."
+  source "$target"
+
+  echo "✅ Installed and loaded! You’re good to go."
+}
+
 # === Update aliases from GitHub ===
 # Downloads latest aliases.sh from GitHub and replaces ~/.aliases.sh
 # Ensures it's sourced in ~/.zshrc
