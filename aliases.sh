@@ -1,4 +1,14 @@
-# === iOS utilities ===
+# ──────────────────────────────────────────────────────────────────────────────
+# 📦 Personal Aliases for iOS Development
+#
+# 🔧 How to install:
+#   - Download aliases.sh file
+#   - `source aliases.sh`
+#   - `update_aliases`
+#
+# 🔧 How to update:
+#   - `update_aliases`
+# ──────────────────────────────────────────────────────────────────────────────
 
 # Installs pods with a repo update, then opens the Xcode workspace or project
 alias pods='pod install --repo-update && xc'
@@ -16,8 +26,8 @@ alias s7s="pkill -x Xcode; s7 reset --all; s7 checkout; pods; xc"
 
 # === Xcode output formatting ===
 
-# Formats raw xcodebuild output using xcbeautify
-# Usage: xcb path/to/log.txt
+# Formats raw xcodebuild output using xcbeautify. Drag and drop path to log file
+# Usage: xcb path/to/file.log
 xcb() {
     cat "$1" | xcbeautify
 }
