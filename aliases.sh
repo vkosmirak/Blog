@@ -48,11 +48,13 @@ xc() {
 # Downloads latest aliases.sh from GitHub and replaces ~/.aliases.sh
 # Ensures it's sourced in ~/.zshrc
 update_aliases() {
-  local url="https://raw.githubusercontent.com/vkosmirak/Blog/master/aliases.sh"
+  local url="https://api.github.com/repos/vkosmirak/Blog/contents/aliases.sh"
   local target="$HOME/.aliases.sh"
 
-  echo "⬇️  Downloading latest aliases from GitHub..."
-  if curl -fsSL "$url" -o "$target"; then
+  echo "⬇️ Downloading latest aliases from GitHub..."
+  if curl -fsSL "$url" \
+    -H "Accept: application/vnd.github.v3.raw" \
+    -o "$target"; then
     echo "✅ Saved to $target"
   else
     echo "❌ Failed to download aliases from $url"
@@ -69,5 +71,5 @@ update_aliases() {
   echo "🔄 Reloading ~/.aliases.sh into current shell..."
   source "$target"
 
-  echo "✅ Done. Run 'source ~/.zshrc' to reload your aliases."
+  echo "✅ Done. Aliases updated and reloaded!"
 }
