@@ -70,6 +70,12 @@ Install certificates
 alias xc='open "$(find . -maxdepth 1 -name "*.xcworkspace" | head -n 1)"'
 alias pods='pod install --repo-update && xc'
 alias "pods fix"='pod repo remove trunk'
+
+alias s7s="pkill -x Xcode; s7 reset --all; s7 checkout; pods; xc"
+
+xcb() {
+    cat "$1" | xcbeautify
+}
 ```
 
 ### iTerm:
