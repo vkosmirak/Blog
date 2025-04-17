@@ -66,5 +66,8 @@ update_aliases() {
     echo "✅ ~/.zshrc already sources ~/.aliases.sh"
   fi
 
+  echo "🔄 Reloading ~/.aliases.sh into current shell..."
+  source "$target"
+
   echo "✅ Done. Run 'source ~/.zshrc' to reload your aliases."
 }
