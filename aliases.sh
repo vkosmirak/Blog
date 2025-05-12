@@ -33,24 +33,39 @@ xcb() {
 }
 
 
-# === Open Xcode workspace/project ===
-
-# Opens the .xcworkspace if present; otherwise opens the .xcodeproj
-# If neither exists, shows a friendly message
+# === Open Xcode workspace/project and trigger build ===
+#
+# This function searches the current directory for an Xcode workspace (*.xcworkspace)
+# or project (*.xcodeproj) and opens the first match found.
+#
+# Once opened, it waits (up to 30 seconds) for the corresponding Xcode window to appear.
+# After the window appears, it activates Xcode and triggers a build (Cmd + B) automatically.
+#
 xc() {
-  local workspace=$(find . -maxdepth 1 -name "*.xcworkspace" | head -n 1)
-  if [ -n "$workspace" ]; then
-    echo "Opening $(basename "$workspace")"
-    open "$workspace"
+  local projectFile=$(find . -maxdepth 1 \( -name "*.xcworkspace" -o -name "*.xcodeproj" \) | head -n 1)
+  
+  if [ -n "$projectFile" ]; then
+    echo "Opening '$(basename "$projectFile")'"
+    open "$projectFile"
   else
-    local project=$(find . -maxdepth 1 -name "*.xcodeproj" | head -n 1)
-    if [ -n "$project" ]; then
-      echo "Opening $(basename "$project")"
-      open "$project"
-    else
-      echo "No .xcworkspace or .xcodeproj file found."
-    fi
+    echo "No .xcworkspace or .xcodeproj file found."
+    return
   fi
+
+  # Wait for Xcode window to appear
+  local xcodeWindowName=$(basename "$projectFile" | sed 's/\.[^.]*$//')
+  for i in {1..30}; do
+    sleep 1
+    if osascript -e 'tell application "System Events" to get name of every window of process "Xcode"' | grep -Fq "$xcodeWindowName"; then
+      break
+    fi
+    echo "Waiting for Xcode window '$xcodeWindowName' to appear..."
+  done
+
+  # Activate and build project in Xcode
+  echo "Triggering build"
+  osascript -e 'tell application "Xcode" to activate' \
+            -e 'tell application "System Events" to keystroke "b" using {command down}'      
 }
 
 
