@@ -42,7 +42,7 @@ xcb() {
 # After the window appears, it activates Xcode and triggers a build (Cmd + B) automatically.
 #
 xc() {
-  local projectFile=$(find . -maxdepth 1 \( -name "*.xcworkspace" -o -name "*.xcodeproj" \) | head -n 1)
+  local projectFile=$(find . -maxdepth 1 -name '*.xcworkspace' | head -n 1 || find . -maxdepth 1 -name '*.xcodeproj' | head -n 1)
   
   if [ -n "$projectFile" ]; then
     echo "Opening '$(basename "$projectFile")'"
