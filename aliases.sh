@@ -21,7 +21,7 @@ alias "pods fix"='pod repo remove trunk'
 
 # Resets all s7 modules, checks them out, installs pods, and opens the workspace/project
 # Also ensures Xcode is not running before proceeding
-alias s7s="pkill -x Xcode; s7 reset --all; s7 checkout; pods; xc"
+alias s7s="pkill -x Xcode; s7 reset --all; s7 checkout; pods"
 
 
 # === Xcode output formatting ===
