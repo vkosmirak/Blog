@@ -21,16 +21,7 @@ alias "pods fix"='pod repo remove trunk'
 
 # Resets all s7 modules, checks them out, installs pods, and opens the workspace/project
 # Also ensures Xcode is not running before proceeding
-alias s7s="pkill -x Xcode; s7 reset --all; s7 checkout; pods"
-
-
-# === Xcode output formatting ===
-
-# Formats raw xcodebuild output using xcbeautify. Drag and drop path to log file
-# Usage: xcb path/to/file.log
-xcb() {
-    cat "$1" | xcbeautify
-}
+alias s7s="pkill -x Xcode; s7 reset --all; s7 checkout; pods; xc"
 
 
 # === Open Xcode workspace/project and trigger build ===
@@ -66,6 +57,21 @@ xc() {
   echo "Triggering build"
   osascript -e 'tell application "Xcode" to activate' \
             -e 'tell application "System Events" to keystroke "b" using {command down}'      
+}
+
+
+# === Open Xcode DerivedData directory ===
+#
+# This function opens the Xcode DerivedData directory in Finder.
+alias xc_open_derived_data='open ~/Library/Developer/Xcode/DerivedData'
+
+
+# === Xcode output formatting ===
+
+# Formats raw xcodebuild output using xcbeautify. Drag and drop path to log file
+# Usage: xcb path/to/file.log
+xcb() {
+    cat "$1" | xcbeautify
 }
 
 
