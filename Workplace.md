@@ -43,7 +43,8 @@
 3. Open Raycast: Control + space
 4. Tree fingers drag (https://support.apple.com/en-us/HT204609)
 5. Terminal green theme (Preferences/Profile/Grass/Default)
-6. Zoom via Control+Scroll: Settings / Accessibility / Zoom/Use scroll gesture with modifier keys to zoom
+6. Zoom via Control+Scroll: Settings / Accessibility / Zoom / Use scroll gesture with modifier keys to zoom
+7. Enable Touch ID for sudo ([link](https://dev.to/siddhantkcode/enable-touch-id-authentication-for-sudo-on-macos-sonoma-14x-4d28))
 
 
 ### Xcode:
